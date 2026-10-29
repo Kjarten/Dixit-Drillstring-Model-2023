@@ -126,11 +126,11 @@ Note: Values of $RPM_{SS}$, $ROP_{SS}$ and $DOC_{SS}$ are held the same for all 
 - Top Drive Axial Velocity of Drawworks ($V_o$)
 - Top Drive Angular Velocity of Drum ($ω_o$)
 
-**Coefficient of Friction of Rock ($μ_Rock$):**
+**Coefficient of Friction of Rock ($μ_{Rock}$):**
 
-	Linear empirical relation between rock cutting parameter μ_Rock and confined compressive strength of rock CCS is as follows:
+	Linear empirical relation between rock cutting parameter $μ_{Rock}$ and confined compressive strength of rock CCS is as follows:
 
-μ_Rock=(-0.0201×CCS)+1.5333 
+$μ_{Rock}=(-0.0201×CCS)+1.5333$
 
  
 
