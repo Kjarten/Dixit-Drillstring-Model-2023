@@ -279,8 +279,12 @@ Where,
 - ${k_t}$ = torsional stiffness of drill-string
 - $\dot{\theta}$ = bit rotary velocity Clockwise direction considered as positive
 - $TQ_{Surface}$ = Surface/Top-drive Torque 
- 
-Figure 5: Topdrive Axial and Rotary velocities Vs Time
+
+<div align="center">
+  <img src="https://github.com/Kjarten/Dixit-Drillstring-Model-2023/blob/main/Documentation/Topdrive_Axial_and_Rotary_velocities_Vs_Time.jpg?raw=true" alt="Topdrive Axial and Rotary velocities Vs Time">
+</div>
+<p align="center">Figure 6: Topdrive Axial and Rotary velocities Vs Time</p>
+
 
 Modeling Algorithm and Initial Conditions:
 Coupled Axial-torsional second order differential equation sets, are solved using ODE45 solver. ODE solver is a versatile solver that implements a Runge-Kutta method with a variable time step for efficient computation. The current solver provide robust solution for an Initial valued problem.
