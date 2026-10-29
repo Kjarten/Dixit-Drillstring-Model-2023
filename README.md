@@ -20,21 +20,21 @@ Rajat Dixit
 
 ## Contents
 
-- Preface	1
-- Part-I: Theory and Background	3
-    - Introduction	4
-    - Bit-rock Interaction	5
-- Part-II: Drilling Simulator Methodology	6
-    - Drilling Simulator: Methodology	7
-    - Friction Model	15
-    - Special Cases: Drilling Simulator in Absence of Mud-motor	19
-    - Mud-motor Integrated Drilling Simulator: Methodology	21
-    - Special Cases: Mud-motor Integrated Drilling Simulator	26
-- Part-III: Drilling Simulator Features	39
-    - Drilling Simulator: Developed Features	40
-    - Drilling Simulator: Under Development Features	42
-- Appendix	43
-    - Drilling Simulator: Code Functionality	44
+- Preface
+- Part-I: Theory and Background
+    - Introduction
+    - Bit-rock Interaction
+- Part-II: Drilling Simulator Methodology
+    - Drilling Simulator: Methodology
+    - Friction Model
+    - Special Cases: Drilling Simulator in Absence of Mud-motor
+    - Mud-motor Integrated Drilling Simulator: Methodology
+    - Special Cases: Mud-motor Integrated Drilling Simulator
+- Part-III: Drilling Simulator Features
+    - Drilling Simulator: Developed Features
+    - Drilling Simulator: Under Development Features
+- Appendix
+    - Drilling Simulator: Code Functionality
 
 ## Part-I: Theory and Background 
 ### Introduction
