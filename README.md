@@ -149,8 +149,8 @@ where, 0.5  is model constant for Rock Strength with units in (1/ksi)
 Note: $k_{WOB}$ is calculated assuming a linear model. Value of $k_{WOB}$ is also a function of CCS of formation. 
 
 Coefficient of Torque ($k_{TQ}$):
-$k_{TQ}=TQ_{bit}/DOC_{bit}$
-$k_{TQ}=(k_{WOB} )×(Dia_{Hole})×(μ_{Rock}/3)$
+- $k_{TQ}=TQ_{bit}/DOC_{bit}$
+- $k_{TQ}=(k_{WOB} )×(Dia_{Hole})×(μ_{Rock}/3)$
 
 
 | Rock Strength (Psi) | $μ_{Rock}$ |
