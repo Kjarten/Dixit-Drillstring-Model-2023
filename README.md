@@ -81,7 +81,7 @@ Figure 3: Drilling Simulator Rotary Motion Schematic
 
 - Effective Mass Moment of Inertia ($J$):  Mass moment of inertia is being calculated about the Z axis as,
 
-$J=1/4×m×(D_o^2+D_i^2 )$
+$J=\frac{1}{4}×m×(D_o^2+D_i^2 )$
 
 Where, $m$ is the lumped mass of the drill-string element under consideration. 
 - Area of Cross-section ($A$):  Area of Cross-section of Drill-String elements is being calculated as,
