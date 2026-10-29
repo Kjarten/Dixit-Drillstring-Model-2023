@@ -374,7 +374,7 @@ If, static friction calculated above is less than ($μ_s×F_n$), where $μ_s>μ_
 Also, to avoid discontinuity at $V_{iteration}$ tends to 0, we use Stribeck friction model (1902). To account this, Tustin (1947) proposes the following formulation:
 
 $$
-μ_{effective}=μ_{mud-dynamic}+((μ_{mud-static}-μ_{mud-dynamic} )×e^(-(\frac{|Sliding Velocity_{Resultant} |}{V_{CS}} ) ) )
+μ_{effective}=μ_{mud-dynamic}+((μ_{mud-static}-μ_{mud-dynamic} )×e^{-(\frac{|Sliding Velocity_{Resultant} |}{V_{CS}} ) } )
 $$
 
 Note: $μ_{effective}$ and  $V_{CS}$ (Stribeck critical velocity) accounts for velocity weakening effect into model dynamics
