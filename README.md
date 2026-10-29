@@ -163,11 +163,14 @@ Coefficient of Torque ($k_{TQ}$):
 
 Table 2: Coefficient of Friction of Rock Vs Rock Strength
 
-〖ROP〗_bit	〖RPM〗_bit	〖Reaction Torque〗_bit	〖Reaction Force〗_bit
-+	0		k_WOB×〖DOC〗_(current iteration )
--	0		k_WOB×〖DOC〗_(current iteration )
-0	+	k_TQ×〖DOC〗_(current iteration )	
-0	-	〖-k〗_TQ×〖DOC〗_(current iteration )	
+
+| $ROP_{bit}$| $RPM_{bit}$ | $Reaction Torque_{bit}$ | $Reaction Force_{bit}$ |
+| ---------- | ----------- | ----------------------- | ---------------------- |
+| + | 0 |  | $k_{WOB}×DOC_{current iteration}$ |
+| - | 0 |  | $k_{WOB}×DOC_{current iteration}$ |
+| 0 | + | $k_{TQ}×DOC_{current iteration}$ |  |
+| 0 | - | $k_{TQ}×DOC_{current iteration}$ |  |
+
 Table 3: Bit Reaction Force and Torque components variation with sliding velocities
 Axial and Rotary Borehole Viscous Damper: The Viscous damping effects due to mud flow in the borehole is also accounted in the simulator,
 Under Steady-State conditions, we get,
