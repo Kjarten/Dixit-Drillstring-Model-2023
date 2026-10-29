@@ -57,8 +57,8 @@ Drilling Simulator: Code Functionality	44
 
 
 
-Part-I: Theory and Background 
-Introduction
+# Part-I: Theory and Background 
+## Introduction
 
 Drilling dynamics describes the behavior of the drilling system while creating the borehole. The drilling system itself contains sub-systems and components, such as the drill bit, rotary steerable, motor, reamer, Drill-string, surface and other equipment, as well as the hole geometry and formation properties. Dynamics modeling focuses on discrete components in this system and coupling of these discrete models. As illustrated by Rudat and Dashevskiy, 2011, a simple one-degree-of-freedom rotational lumped-parameter model of the drill-string, when coupled with a simple falling-friction model of the drill-bit (more on this in the bit-rock interaction section), yields a powerful drilling dynamics model of stick-slip for use in control system development.
 
@@ -75,7 +75,7 @@ Empirical rules and driller's experience are often used to dictate the choice of
 
 Note: A detailed literature review of various existing models in the field of drilling dynamics has been carried out to lay the foundation of current drilling simulator. (Link: Drilling Dynamics Literature Review)
 
-Bit-rock Interaction
+## Bit-rock Interaction
 
 A key factor in common with the above referenced literature is that the bit-rock interaction is used to explain the cause of stick slip. The bit-rock interface laws for drilling primarily depends on the relationships of Weight on bit, torque on bit, rate of penetration and angular velocity. The coupled effects of these variables governs the efficient drilling and also set the insurgence of drilling dysfunctions into the system. The force and torque on bit will have dependency on the instantaneous change in axial and angular velocities. The PDC bit-rock interaction is a combination of cutting and frictional contact (Detournay and Defourny 1992). The WOB and Torque on bit are further decomposed into cutting and frictional components depending on the rock strength of formation to be drilled. 
 
@@ -91,8 +91,8 @@ The cutting components will have direct dependency on the depth of cut whereas t
 
 
 
-Part-II: Drilling Simulator Methodology  
-Drilling Simulator: Methodology
+# Part-II: Drilling Simulator Methodology  
+## Drilling Simulator: Methodology
 
 Current Drilling simulator is a coupled 2-DOF Axial-torsional system to model the transient dynamics of drill-string under different operating conditions of drilling and tripping. Modeling is carried out as a Lumped-parameter study. Figure 2 and 3 highlights the Model Schematics along the axial and rotary directions. The drill-string is segregated into multiple elements comprising of drill-pipes, HWDP and collar elements. 
 The bit rock interaction is governed by a depth of cut based model. Stribeck friction is utilized to account for the Coulomb friction, whereas, borehole friction is accounted using Viscous frictional force. The net frictional force have dependency on the gravity force, drilling mud and well inclination. Reaction forces due to bit-rock interaction will be present for the duration bit is on bottom. Following geometrical based parameters of drill-string elements are required as model input for both single and multi-elements drill-string system:
