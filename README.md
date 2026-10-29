@@ -321,9 +321,6 @@ $$
 TQ_{bit} = (k_{TQ}×DOC_{iteration array})×(±1)
 $$
 
-
-Rock_surface_tracking_feature_while_drilling_in_current_drilling_simulator
-
 <div align="center">
   <img src="https://github.com/Kjarten/Dixit-Drillstring-Model-2023/blob/main/Documentation/Rock_surface_tracking_feature_while_drilling_in_current_drilling_simulator.png?raw=true" alt="Rock surface tracking feature while drilling in current drilling simulator">
 </div>
