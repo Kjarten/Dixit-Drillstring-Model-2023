@@ -92,7 +92,9 @@ The bit rock interaction is governed by a depth of cut based model. Stribeck fri
 
 - Effective Mass Moment of Inertia ($J$):  Mass moment of inertia is being calculated about the Z axis as,
 
-$J=\frac{1}{4}×m×(D_o^2+D_i^2 )$
+$$
+J=\frac{1}{4}×m×(D_o^2+D_i^2)
+$$
 
 Where, $m$ is the lumped mass of the drill-string element under consideration. 
 - Area of Cross-section ($A$):  Area of Cross-section of Drill-String elements is being calculated as,
