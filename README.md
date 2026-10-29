@@ -169,11 +169,16 @@ An alternate empirical relation on logarithmic scale is created to avoid limitat
 </div>
 <p align="center">Figure 5: Relationship between μ_Rock and Rock strength, Logarithmic</p>
 
-**Coefficient of WOB ($k_WOB$):** 
+- **Coefficient of WOB ($k_{WOB}$):** 
 
-$k_{WOB}=WOB_{(Cutting Component)}/{DOC_bit} $
+$$
+k_{WOB}=WOB_{(Cutting Component)}/{DOC_{bit}}
+$$
 
-$k_{WOB}=(0.8 )×(0.5×CCS)×(1500*4.45)×(1/DOC_{ss} )×(Dia_{Hole}/(12.25))$
+$$
+k_{WOB}=(0.8)×(0.5×CCS)×(1500*4.45)×(1/DOC_{ss})×(Dia_{Hole}/(12.25))
+$$
+
 where, 0.5  is model constant for Rock Strength with units in (1/ksi) 
 Note: $k_{WOB}$ is calculated assuming a linear model. Value of $k_{WOB}$ is also a function of CCS of formation. 
 
