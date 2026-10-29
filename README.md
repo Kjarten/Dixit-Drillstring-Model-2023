@@ -235,7 +235,9 @@ $$
 m\ddot{Z} + k_a (Z-Z_o )+F_{Friction (Coulomb+Viscous)}+F_{Formation Reaction}=0
 $$
 
-Jθ ̈+k_t (θ-θ_o )+〖TQ〗_(Friction (Coulomb+Viscous))+〖TQ〗_Formation Reaction=0   
+$$
+J\ddot{\theta} + k_t (\theta-\theta_o )+TQ_{Friction (Coulomb+Viscous)}+TQ_{Formation Reaction}=0
+$$
 
 F_Formation Reaction=〖WOB〗_downhole
 〖TQ〗_Formation Reaction=〖TQ〗_downhole
