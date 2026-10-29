@@ -160,11 +160,16 @@ $μ_{Rock}=(-0.0201×CCS)+1.5333$
 </div>
 <p align="center">Figure 4: Relationship between μ_Rock and Rock strength (Ref: Dave Schnell, BHGE)</p>
 
-Note: CCS of formation limits to 60 ksi to give stable robust solutions, as beyond CCS = 76 ksi, value μ_Rock goes negative.
-	An alternate empirical relation on logarithmic scale is created to avoid limitation on rocks having higher confined compressive strength.
- 
+Note: CCS of formation limits to 60 ksi to give stable robust solutions, as beyond CCS = 76 ksi, value $μ_{Rock}$ goes negative.
 
-	Coefficient of WOB ($k_WOB$): 
+An alternate empirical relation on logarithmic scale is created to avoid limitation on rocks having higher confined compressive strength.
+
+<div align="center">
+  <img src="https://github.com/Kjarten/Dixit-Drillstring-Model-2023/blob/main/Documentation/Relationship_between_mu_Rock_and_Rock_strength_Logarithmic.png?raw=true" alt="Relationship between μ_Rock and Rock strength, Logarithmic">
+</div>
+<p align="center">Figure 5: Relationship between μ_Rock and Rock strength, Logarithmic</p>
+
+**Coefficient of WOB ($k_WOB$):** 
 
 $k_{WOB}=WOB_{(Cutting Component)}/{DOC_bit} $
 
