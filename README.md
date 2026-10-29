@@ -151,13 +151,16 @@ Note: Values of $RPM_{SS}$, $ROP_{SS}$ and $DOC_{SS}$ are held the same for all 
 
 **Coefficient of Friction of Rock ($μ_{Rock}$):**
 
-	Linear empirical relation between rock cutting parameter $μ_{Rock}$ and confined compressive strength of rock CCS is as follows:
+Linear empirical relation between rock cutting parameter $μ_{Rock}$ and confined compressive strength of rock CCS is as follows:
 
 $μ_{Rock}=(-0.0201×CCS)+1.5333$
 
- 
+<div align="center">
+  <img src="https://github.com/Kjarten/Dixit-Drillstring-Model-2023/blob/main/Documentation/Relationship_between_mu_Rock_and_Rock_strength?raw=true" alt="Relationship between μ_Rock and Rock strength">
+</div>
+<p align="center">Figure 4: Relationship between μ_Rock and Rock strength (Ref: Dave Schnell, BHGE)</p>
 
-Figure 4: Relationship between μ_Rock and Rock strength (Ref: Dave Schnell, BHGE)
+
 
 Note: CCS of formation limits to 60 ksi to give stable robust solutions, as beyond CCS = 76 ksi, value μ_Rock goes negative.
 	An alternate empirical relation on logarithmic scale is created to avoid limitation on rocks having higher confined compressive strength.
