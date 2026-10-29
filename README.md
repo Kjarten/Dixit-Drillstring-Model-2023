@@ -118,14 +118,15 @@ Steady-State Parameters for 2000 Psi CCS Value:
 - $ROP_{SS} = 27 m/hr$
 - $RPM_{SS} = 120 rpm$
 - $DOC_{SS} =  ROP_{ss}/RPM_{ss}  = 0.147 inch/rev$
+
 Note: Values of $RPM_{SS}$, $ROP_{SS}$ and $DOC_{SS}$ are held the same for all simulation runs to have uniformity and robustness in model for different sensitivity cases. Initial model tuning parameters is taken to be conservative to setup the problem in simulator.
-	Calculation of Other Model Inputs 
 
-	Top-drive Axial Velocity of Draw-works ($V_o$)
+**Calculation of Other Model Inputs:** 
 
-	Top-drive Angular Velocity of Drum ($ω_o$)
+- Top Drive Axial Velocity of Drawworks ($V_o$)
+- Top Drive Angular Velocity of Drum ($ω_o$)
 
-Coefficient of Friction of Rock ($μ_Rock$):
+**Coefficient of Friction of Rock ($μ_Rock$):**
 
 	Linear empirical relation between rock cutting parameter μ_Rock and confined compressive strength of rock CCS is as follows:
 
@@ -139,7 +140,7 @@ Note: CCS of formation limits to 60 ksi to give stable robust solutions, as beyo
 	An alternate empirical relation on logarithmic scale is created to avoid limitation on rocks having higher confined compressive strength.
  
 
-	Coefficient of WOB (k_WOB): 
+	Coefficient of WOB ($k_WOB$): 
 
 k_WOB=〖WOB〗_(Cutting Component)/〖DOC〗_bit 
 
