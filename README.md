@@ -286,21 +286,21 @@ Where,
 <p align="center">Figure 6: Topdrive Axial and Rotary velocities Vs Time</p>
 
 
-Modeling Algorithm and Initial Conditions:
+**Modeling Algorithm and Initial Conditions:**
 Coupled Axial-torsional second order differential equation sets, are solved using ODE45 solver. ODE solver is a versatile solver that implements a Runge-Kutta method with a variable time step for efficient computation. The current solver provide robust solution for an Initial valued problem.
-	Z ̇=V 
-	Z ̈=V ̇ = a 
-	θ ̇=ω 
-	θ ̈=(ω" " ) ̇= α
+- $\dot{Z} = V$ 
+- $\ddot{Z} = \dot{V} = a$ 
+- $\dot{\theta} = \omega$ 
+- $\ddot{\theta} = \dot{\theta} = \alpha$
 
-Equations to be used in Solver:
-dZ/dt=V
-dV/dt=-(1/m)×(Net External Force)
-dθ/dt= ω
-
-dω/dt=-(1/J)×(Net External Torque)
-Initial Conditions for first iteration: 
-Four outputs that we are getting from the equations are displacement (Z), axial velocity (Z ̇), rotation angle (Θ) and angular velocity (ω) for each elements. Following initial conditions are implemented for solving the above set of equations for first iteration.
+**Equations to be used in Solver:**
+- $\frac{dZ}{dt}=V$
+- $\frac{dV}{dt}=-(\frac{1}{m})×(Net External Force)$
+- $\frac{d\theta}{dt} = \omega$
+- $\frac{d\omega}{dt}=-(\frac{1}{J})×(Net External Torque)$
+  
+**Initial Conditions for first iteration:** 
+Four outputs that we are getting from the equations are displacement ($Z$), axial velocity ($\dot{Z}), rotation angle ($\Psi$) and angular velocity ($\omega$) for each elements. Following initial conditions are implemented for solving the above set of equations for first iteration.
 	t  = 0
 	Z  = 0
 	Z ̇ = 0 
