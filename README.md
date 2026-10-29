@@ -1,7 +1,6 @@
 # EM-Coupled-Axial-Torsional-Model
 ExxonMobil Coupled Axial Torsional Model 2023-06
 
- 
 ## Preface
 
 Rotary drilling systems exhibits self-excited coupled axial and torsional vibrations in the drill-string under various operating conditions of drilling. The severity of these dysfunctions leads to the onset of Stick-slip vibration with PDC bits. These vibrations are governed by the torsional stick and slip phases of the drill-string. Periodic stick-slip phases results in zero bit angular velocity, where string stores the reactive torque momentarily and releases the trapped torque in slip phase, where the angular velocity peaks to twice or thrice the average value.
@@ -18,15 +17,6 @@ This document provides detailed review of technical information gathered on Dril
 Have a nice day,
 
 Rajat Dixit
-
-
- 
-
-
-
- 
-
-
 
 ## Contents
 
@@ -45,17 +35,6 @@ Rajat Dixit
     - Drilling Simulator: Under Development Features	42
 - Appendix	43
     - Drilling Simulator: Code Functionality	44
-
-
-
- 
-
-
-
-
-
-
-
 
 ## Part-I: Theory and Background 
 ### Introduction
@@ -80,16 +59,6 @@ Note: A detailed literature review of various existing models in the field of dr
 A key factor in common with the above referenced literature is that the bit-rock interaction is used to explain the cause of stick slip. The bit-rock interface laws for drilling primarily depends on the relationships of Weight on bit, torque on bit, rate of penetration and angular velocity. The coupled effects of these variables governs the efficient drilling and also set the insurgence of drilling dysfunctions into the system. The force and torque on bit will have dependency on the instantaneous change in axial and angular velocities. The PDC bit-rock interaction is a combination of cutting and frictional contact (Detournay and Defourny 1992). The WOB and Torque on bit are further decomposed into cutting and frictional components depending on the rock strength of formation to be drilled. 
 
 The cutting components will have direct dependency on the depth of cut whereas the frictional components will be accounted to keep track of the dissipated lost energy in model while drilling the formation. To better assess the frictional forces at bit and along the length of drill-string in a deviated wellbore, a consolidated friction model (IADC/SPE-199678) is implemented in the drilling simulator. 
-
-
-
-
-
-
-
-
-
-
 
 ## Part-II: Drilling Simulator Methodology  
 ### Drilling Simulator: Methodology
@@ -222,31 +191,6 @@ F_Formation Reaction=〖WOB〗_downhole
 〖WOB〗_downhole= (F_Formation Reaction Cutting Component ) + (F_Formation Reaction Frictional Component )
 
 In Vector form above equations takes the form:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 Where,
 
@@ -393,34 +337,6 @@ Note:
 
 	Numerical Data presented in the document has been taken from Eric Cayeux’s work: SPE- 199678-MS, “Analysis of Torsional Stick-slip Situations Observed with Downhole High Frequency Magnetometer Data”
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### Special Cases: Drilling Simulator in the Absence of Mud-motor
 
 Well: Hebron P1D-OP17 12.25” hole-section
@@ -507,23 +423,6 @@ Constant Values for Current PDM Case: 6.75” Scout 7/8 5.0
 	RPG: 0.28 (Revs/Gallon)
 	Mud flow rate does not account for the pressure pulse in the system, the energy transfer delay from mud-pumps to mud-motor downhole is accounted by various ramp function inputs, i.e.,
 Q_(Mud-pumps)=f(time)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ### Special Cases: Mud-motor Integrated Drilling Simulator
 
@@ -635,21 +534,6 @@ Note:
 
 	We are calculating the differential pressure at the motor itself based on the Reaction Torque, and not allowing its effects transfer back up to surface. Additionally, “Fluid Compressibility” effect not accounted. The off-bottom SPP is not accounted for in model as for now. Effect of off-bottom SPP will be included in the model later by considering the flow in pipe to be approximately Laminar where, SPP∝ 〖Flow Rate〗^2.
 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Part-III: Drilling Simulator Features  
 ### Drilling Simulator: Developed Features
 
@@ -722,20 +606,8 @@ The current drilling simulator is robust to perform the basic drilling and tripp
 
 	Other potential upgrades we are focusing on includes: robust borehole friction accounting, angle, spiral and reverse whirl phenomenon. Hydraulics and pump off force with inclusion of pressure pulse effects 
 
-
-
-
-
-
-
-
-
-
-
-
-
-Appendix  
-Drilling Simulator: Code Functionality
+## Appendix  
+### Drilling Simulator: Code Functionality
 
 The Drilling simulator capabilities can be utilized to model various drilling and tripping scenarios and assess the severity of various drilling dysfunctions including stick-slip. 
 User needs to provide data for various input parameters to model the dynamics of different studies. Some of the key outline parameters are:
