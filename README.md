@@ -74,9 +74,15 @@ The bit rock interaction is governed by a depth of cut based model. Stribeck fri
 - Axial Stiffness
 - Torsional Stiffness
 
-Model Axial and Rotary Schematics:
+**Model Axial and Rotary Schematics:**
 
-Figure 2: Drilling Simulator Axial Motion Schematic
+<div align="center">
+  <img src="(https://github.com/Kjarten/Dixit-Drillstring-Model-2023/blob/main/Documentation/Drilling_Simulator_Axial_Motion_Schematic.png?raw=true
+)" alt="Drilling Simulator Axial Motion Schematic">
+</div>
+<p align="center">Figure 2: Drilling Simulator Axial Motion Schematic</p>
+
+
  
 Figure 3: Drilling Simulator Rotary Motion Schematic
 
