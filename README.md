@@ -269,13 +269,13 @@ Where,
 - $Z$ = bit position downward direction considered as positive
 - $k_a$ = axial stiffness of drill-string element
 - $V_o$ = Top drive (drawworks) axial velocity as input
-- $Z_{top_drive}$ = Top drive (drawworks) axial displacement as input
+- $Z_{TopDrive}$ = Top drive (drawworks) axial displacement as input
 - $\dot{Z}$ ̇= bit axial velocity downward direction considered as positive
 - $WOB_{Surface}$ = Surface/Top-drive WOB (In ROP Control Mode)
 - $J_n$ = mass moment of inertia of drill string element
 - $\theta$ = rotation angle, Clockwise direction is considered as positive
 - $\omega_o$ = Topdrive angular velocity as input 
-- $\theta_{top_drive}$= Topdrive rotation as input 
+- $\theta_{TopDrive}$= Topdrive rotation as input 
 - ${k_t}$ = torsional stiffness of drill-string
 - $\dot{\theta}$ = bit rotary velocity Clockwise direction considered as positive
 - $TQ_{Surface}$ = Surface/Top-drive Torque 
