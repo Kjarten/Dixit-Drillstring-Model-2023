@@ -77,7 +77,7 @@ Figure 2: Drilling Simulator Axial Motion Schematic
  
 Figure 3: Drilling Simulator Rotary Motion Schematic
 
-Drill-String Model Parameters:
+**Drill-String Model Parameters**:
 
 - Effective Mass Moment of Inertia ($J$):  Mass moment of inertia is being calculated about the Z axis as,
 
