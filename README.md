@@ -230,9 +230,11 @@ Note:
 - Values of Viscous dampers are held constants during simulation but the Viscous frictional force will vary depending on the axial and tangential sliding velocities
 
 **GOVERNING EQUATIONS:**
+
 $$
 mZ̈ + k_a (Z-Z_o )+F_{Friction (Coulomb+Viscous)}+F_{Formation Reaction}=0
 $$
+
 Jθ ̈+k_t (θ-θ_o )+〖TQ〗_(Friction (Coulomb+Viscous))+〖TQ〗_Formation Reaction=0   
 
 F_Formation Reaction=〖WOB〗_downhole
