@@ -302,7 +302,7 @@ WOB_bit= (k_WOB×〖DOC〗_(iteration ) )+(c_(bit-axial)×Z ̇_(bit-iteration) )
 〖TQ〗_bit= (k_TQ×〖DOC〗_(iteration array) )×(±1)
  
 Figure 6: Rock surface tracking feature while drilling in current drilling simulator (Bit displacement along downward direction)
-Friction Model
+### Friction Model
 
 Modeling friction forces along the length of drill-string is challenging due to the non-linear behavior of system with ever changing velocity direction. Net frictional force is a strong function of the sliding velocity. The axial component of the frictional force contributes to the drag force whereas, the tangential component of the frictional force generates a frictional torque in the system.
 As the force of friction increases, the friction force introduces a negative damping effect when the sliding velocity gets close to zero. This negative damping generates stick-slip dysfunction even in the case when bit is off-bottom. In deviated wells, the topdrive axial velocity of draw-works and rpm of drum does not get transferred to the bit instantly, the elements of the drill-string have to overcome the static limits of friction to transfer the energy to the next element. This lag of energy transfer is generated effectively by the Stribeck curve, where net frictional torque decays with increase in sliding velocity.
@@ -421,7 +421,7 @@ Note:
 
 
 
-Special Cases: Drilling Simulator in the Absence of Mud-motor
+### Special Cases: Drilling Simulator in the Absence of Mud-motor
 
 Well: Hebron P1D-OP17 12.25” hole-section
 Max Well Inclination: 60^0
