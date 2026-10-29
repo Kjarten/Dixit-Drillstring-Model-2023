@@ -336,30 +336,48 @@ As the force of friction increases, the friction force introduces a negative dam
 To better understand the dynamics of system with the introduction of the friction model, model input parameters are calculated below to provide overview of the various forces and torque components acting on different drill-string elements in the axial and tangential directions.
 
 **Buoyant Factor ($B_f$):**
+
 $$
 B_f=\frac{ρ_s-ρ_m}{ρ_s} 
 $$
+
 Where,
 - $ρ_s$ is density of drill-pipe/BHA material (Steel: 7840  kg/m^3 ) 
 - $ρ_m$ is density of drilling mud (NAF based: 1350 kg/m^3 )
-- From here, $B_f$ = 0.83 (B_f is a function of the density of pipe and mud-weight)
+- From here, $B_f$ = 0.83 ($B_f$ is a function of the density of pipe and mud-weight)
 
-**Normal Force ($F_{n,iteration}):**
+**Normal Force ($F_{n,iteration}$):**
 
-F_Normal=(B_f×M_(BHA-effective)×g×sin⁡θ )
-	θ= inclination angle of wellbore (in °), including well trajectory for general case (discrete distribution of drill-string elements length Vs Inclination Angle)
-	g = acceleration due to gravity (9.81m/〖sec〗^2 )
-	B_f= Buoyant factor accounting the density effect of Mud and BHA
+$$
+F_{Normal}=(B_f×M_{BHA-effective}×g×sin\theta)
+$$
+
+- $\theta$ = inclination angle of wellbore (in °), including well trajectory for general case (discrete distribution of drill-string elements length Vs Inclination Angle)
+- $g$ = acceleration due to gravity (9.81m/〖sec〗^2 )
+- $B_f$ = Buoyant factor accounting the density effect of Mud and BHA
+
 Note: String Capstan effects (due to pipe stretch) are not accounted in the model yet. This feature is already present in Torque and Drag module of EMWells ToolPro.
-Dynamic Frictional Force (F_(n,k)): 
-F_(μ,k)=μ_k×F_n×(Sign(V_Sliding ))
-The dynamic friction force will act in direction opposite to the axial velocity of motion. If, static friction applies, i.e., V_Sliding=0, then static friction force F_(μ,s) acts in the direction opposite to the sum of all tangential forces with a magnitude that equals the sum of all tangential forces. Condition below is valid for the case when V_Sliding=0
-F_(μ,s)+∑▒F_Ext =0
-If, static friction calculated above is less than (μ_s×F_n), where μ_s>μ_k then the surface do not slide.
-Also, to avoid discontinuity at V_iteration tends to 0, we use Stribeck friction model (1902). To account this, Tustin (1947) proposes the following formulation:
-μ_effective=μ_(mud-dynamic)+((μ_(mud-static)-μ_(mud-dynamic) )×e^(-(|〖Sliding Velocity〗_Resultant |/V_CS ) ) )
 
-Note: μ_effective and  V_CS (Stribeck critical velocity) accounts for velocity weakening effect into model dynamics
+**Dynamic Frictional Force ($F_{n,k}$):**
+
+$$
+F_{μ,k}=μ_k×F_n×(Sign(V_{Sliding}))
+$$
+
+The dynamic friction force will act in direction opposite to the axial velocity of motion. If, static friction applies, i.e., $V_{Sliding}=0$, then static friction force $F_{μ,s}$ acts in the direction opposite to the sum of all tangential forces with a magnitude that equals the sum of all tangential forces. Condition below is valid for the case when $V_{Sliding}=0$
+
+$$
+F_{μ,s}+\sum F_{Ext} =0
+$$
+
+If, static friction calculated above is less than ($μ_s×F_n$), where $μ_s>μ_k$ then the surface do not slide.
+Also, to avoid discontinuity at $V_{iteration}$ tends to 0, we use Stribeck friction model (1902). To account this, Tustin (1947) proposes the following formulation:
+
+$$
+μ_{effective}=μ_{mud-dynamic}+((μ_{mud-static}-μ_{mud-dynamic} )×e^(-(\frac{|Sliding Velocity_{Resultant} |}{V_{CS}} ) ) )
+$$
+
+Note: $μ_{effective}$ and  $V_{CS}$ (Stribeck critical velocity) accounts for velocity weakening effect into model dynamics
 
 
   
