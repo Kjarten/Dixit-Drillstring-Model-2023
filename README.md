@@ -93,7 +93,7 @@ The bit rock interaction is governed by a depth of cut based model. Stribeck fri
 - Effective Mass Moment of Inertia ($J$):  Mass moment of inertia is being calculated about the Z axis as,
 
 $$
-J=\frac{1}{4}×m×(D_o^2+D_i^2)
+J=\frac{1}{4}\times m \times(D_o^2+D_i^2)
 $$
 
 Where, $m$ is the lumped mass of the drill-string element under consideration. 
@@ -106,19 +106,19 @@ $$
 - Axial Stiffness($k_a$):  Axial stiffness is being calculated using Area of cross-section of pipes ($A$), Young’s Modulus of Elasticity ($E$) and length of Drill-string ($L$), respectively as,
 
 $$
-k_a=\frac{(A×E)}{L}
+k_a=\frac{(A \times E)}{L}
 $$
 
 - Torsional Stiffness($k_t$):  Torsional stiffness is being calculated using Polar Moment of Inertia ($A$), Shear Modulus ($G$) and length of Drill-string ($L$), respectively as,
 
 $$
-k_t=\frac{(G×J)}{L}
+k_t=\frac{(G \times J)}{L}
 $$
 
 Where,
 
 $$
-J= \frac{π}{32}×(D_o^4-D_i^4)
+J= \frac{\pi}{32} \times (D_o^4-D_i^4)
 $$
 
 Note: For Steel, $E = 210 GPa$ and $G = 79.3 GPa$ 
@@ -154,7 +154,7 @@ Note: Values of $RPM_{SS}$, $ROP_{SS}$ and $DOC_{SS}$ are held the same for all 
 Linear empirical relation between rock cutting parameter $μ_{Rock}$ and confined compressive strength of rock CCS is as follows:
 
 $$
-μ_{Rock}=(-0.0201×CCS)+1.5333
+μ_{Rock}=(-0.0201 \times CCS)+1.5333
 $$
 
 <div align="center">
@@ -178,7 +178,7 @@ k_{WOB}=\frac{WOB_{(Cutting Component)}}{DOC_{bit}}
 $$
 
 $$
-k_{WOB}=(0.8)×(0.5×CCS)×(1500*4.45)×(\frac{1}{DOC_{ss}})×(\frac{Dia_{Hole}}{12.25})
+k_{WOB}=(0.8)\times(0.5 \times CCS)\times(1500 \times 4.45)\times(\frac{1}{DOC_{ss}})\times(\frac{Dia_{Hole}}{12.25})
 $$
 
 where, 0.5  is model constant for Rock Strength with units in (1/ksi) 
@@ -192,7 +192,7 @@ k_{TQ}=\frac{TQ_{bit}}{DOC_{bit}}
 $$
 
 $$
-k_{TQ}=(k_{WOB} )×(Dia_{Hole})×(\frac{μ_{Rock}}{3})
+k_{TQ}=(k_{WOB})\times(Dia_{Hole})\times(\frac{μ_{Rock}}{3})
 $$
 
 
@@ -209,10 +209,10 @@ Table 2: Coefficient of Friction of Rock Vs Rock Strength
 
 | $ROP_{bit}$| $RPM_{bit}$ | $Reaction Torque_{bit}$ | $Reaction Force_{bit}$ |
 | ---------- | ----------- | ----------------------- | ---------------------- |
-| + | 0 |  | $k_{WOB}×DOC_{current iteration}$ |
-| - | 0 |  | $k_{WOB}×DOC_{current iteration}$ |
-| 0 | + | $k_{TQ}×DOC_{current iteration}$ |  |
-| 0 | - | $k_{TQ}×DOC_{current iteration}$ |  |
+| + | 0 |  | $k_{WOB} \times DOC_{current iteration}$ |
+| - | 0 |  | $k_{WOB}\times DOC_{current iteration}$ |
+| 0 | + | $k_{TQ} \times DOC_{current iteration}$ |  |
+| 0 | - | $k_{TQ} \times DOC_{current iteration}$ |  |
 
 Table 3: Bit Reaction Force and Torque components variation with sliding velocities
 
@@ -221,7 +221,7 @@ Table 3: Bit Reaction Force and Torque components variation with sliding velocit
 Under Steady-State conditions, we get,
 
 - $c_{t-borehole}=7500-20000$
-- $c_{a-borehole}=c_{t-borehole}×(\frac{ROP_{ss}}{(RPM_{SS})×(π×D_{Tooljoint})})$
+- $c_{a-borehole}=c_{t-borehole}\times(\frac{ROP_{ss}}{(RPM_{SS})×(\pi \times D_{Tooljoint})})$
 
 
 Note:  
@@ -240,11 +240,11 @@ J\ddot{\theta} + k_t (\theta-\theta_o )+TQ_{Friction (Coulomb+Viscous)}+TQ_{Form
 $$
 
 $$
-F_{Formation Reaction}=WOB_{downhole}
+F_{Formation Reaction} = WOB_{downhole}
 $$
 
 $$
-TQ_{Formation Reaction}=TQ_{downhole}
+TQ_{Formation Reaction} = TQ_{downhole}
 $$
 
 $$
@@ -295,9 +295,9 @@ Coupled Axial-torsional second order differential equation sets, are solved usin
 
 **Equations to be used in Solver:**
 - $\frac{dZ}{dt}=V$
-- $\frac{dV}{dt}=-(\frac{1}{m})×(Net External Force)$
+- $\frac{dV}{dt}=-(\frac{1}{m}) \times (Net External Force)$
 - $\frac{d\theta}{dt} = \omega$
-- $\frac{d\omega}{dt}=-(\frac{1}{J})×(Net External Torque)$
+- $\frac{d\omega}{dt}=-(\frac{1}{J}) \times (Net External Torque)$
   
 **Initial Conditions for first iteration:** 
 Four outputs that we are getting from the equations are displacement ($Z$), axial velocity ($\dot{Z}$), rotation angle ($\Theta$) and angular velocity ($\omega$) for each elements. Following initial conditions are implemented for solving the above set of equations for first iteration.
@@ -313,13 +313,13 @@ Four outputs that we are getting from the equations are displacement ($Z$), axia
 - Downhole Bit WOB: 
 
 $$
-WOB_{bit}= (k_{WOB}×DOC_{iteration})+(c_{bit-axial}×\dot{Z}_{bit-iteration})
+WOB_{bit}= (k_{WOB} \times DOC_{iteration})+(c_{bit-axial} \times \dot{Z}_{bit-iteration})
 $$
 
 - Downhole Bit Torque: 
 
 $$
-TQ_{bit} = (k_{TQ}×DOC_{iteration array})×(±1)
+TQ_{bit} = (k_{TQ} \times DOC_{iteration array})\times(±1)
 $$
 
 <div align="center">
@@ -331,7 +331,7 @@ $$
 
 Modeling friction forces along the length of drill-string is challenging due to the non-linear behavior of system with ever changing velocity direction. Net frictional force is a strong function of the sliding velocity. The axial component of the frictional force contributes to the drag force whereas, the tangential component of the frictional force generates a frictional torque in the system.
 
-As the force of friction increases, the friction force introduces a negative damping effect when the sliding velocity gets close to zero. This negative damping generates stick-slip dysfunction even in the case when bit is off-bottom. In deviated wells, the topdrive axial velocity of draw-works and rpm of drum does not get transferred to the bit instantly, the elements of the drill-string have to overcome the static limits of friction to transfer the energy to the next element. This lag of energy transfer is generated effectively by the Stribeck curve, where net frictional torque decays with increase in sliding velocity.
+As the force of friction increases, the friction force introduces a negative damping effect when the sliding velocity gets close to zero. This negative damping generates stick-slip dysfunction even in the case when bit is off-bottom. In deviated wells, the topdrive axial velocity of drawworks and rpm of drum does not get transferred to the bit instantly, the elements of the drill-string have to overcome the static limits of friction to transfer the energy to the next element. This lag of energy transfer is generated effectively by the Stribeck curve, where net frictional torque decays with increase in sliding velocity.
 
 To better understand the dynamics of system with the introduction of the friction model, model input parameters are calculated below to provide overview of the various forces and torque components acting on different drill-string elements in the axial and tangential directions.
 
@@ -349,11 +349,11 @@ Where,
 **Normal Force ($F_{n,iteration}$):**
 
 $$
-F_{Normal}=(B_f×M_{BHA-effective}×g×sin\theta)
+F_{Normal}=(B_f \times M_{BHA-effective} \times g \times sin\theta)
 $$
 
 - $\theta$ = inclination angle of wellbore (in °), including well trajectory for general case (discrete distribution of drill-string elements length Vs Inclination Angle)
-- $g$ = acceleration due to gravity (9.81m/〖sec〗^2 )
+- $g$ = acceleration due to gravity ($9.81m/sec^2$)
 - $B_f$ = Buoyant factor accounting the density effect of Mud and BHA
 
 Note: String Capstan effects (due to pipe stretch) are not accounted in the model yet. This feature is already present in Torque and Drag module of EMWells ToolPro.
@@ -361,7 +361,7 @@ Note: String Capstan effects (due to pipe stretch) are not accounted in the mode
 **Dynamic Frictional Force ($F_{n,k}$):**
 
 $$
-F_{μ,k}=μ_k×F_n×(Sign(V_{Sliding}))
+F_{μ,k}=μ_k \times F_n \times (Sign(V_{Sliding}))
 $$
 
 The dynamic friction force will act in direction opposite to the axial velocity of motion. If, static friction applies, i.e., $V_{Sliding}=0$, then static friction force $F_{μ,s}$ acts in the direction opposite to the sum of all tangential forces with a magnitude that equals the sum of all tangential forces. Condition below is valid for the case when $V_{Sliding}=0$
