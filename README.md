@@ -129,7 +129,7 @@ Note: For Steel, $E = 210 GPa$ and $G = 79.3 GPa$
 | ---------- | ------ | ------ |
 | Section TD | 5864 m | 2762 m |
 | Drillpipe OD | 6.625’’ | 5.875’’ |
-| Tool-joint Size | 8.5’’ | 7’’ |
+| Tooljoint Size | 8.5’’ | 7’’ |
 | Hole Section (Diameter) | 12.25’’ | 12.25’’ |
 | CCS formation | 2000-60000 Psi | 2000-60000 Psi |
 
@@ -221,7 +221,7 @@ Table 3: Bit Reaction Force and Torque components variation with sliding velocit
 Under Steady-State conditions, we get,
 
 - $c_{t-borehole}=7500-20000$
-- $c_{a-borehole}=c_{t-borehole}×(\frac{ROP_{ss}}{(RPM_{SS})×(π×D_{Tool-joint})})$
+- $c_{a-borehole}=c_{t-borehole}×(\frac{ROP_{ss}}{(RPM_{SS})×(π×D_{Tooljoint})})$
 
 
 Note:  
@@ -353,8 +353,8 @@ KCI Polymer Water-based	0.3	0.4
 Table 4: Typical values for Static and Dynamic Friction Coefficients
 Friction Model Input Parameters
 
-	〖Dia〗_(Pipe-equivalent) is used in the model to compensate for the size difference between drill-pipe and Tool-joint:
-〖Dia〗_(Pipe-equivalent)=((27×〖Dia〗_pipe )+(3×〖Dia〗_(Tool-joint) ))/30
+	〖Dia〗_(Pipe-equivalent) is used in the model to compensate for the size difference between drill-pipe and Tooljoint:
+〖Dia〗_(Pipe-equivalent)=((27×〖Dia〗_pipe )+(3×〖Dia〗_(Tooljoint) ))/30
 	Coulomb Friction Force:
 
 Coulomb Friction Force=μ_effective×F_Normal
@@ -617,7 +617,7 @@ They are categorized as follows:
 	Torque and Drag testing using side forces (Well-path inclination dependent)
 	Tracking of Drilling Vs Tripping phase (Hole-depth Vs Bit Depth Positioning Tracker)
 	Independent Rotary and Axial motion (SO/PU operations) 
-	Pipe ID/OD and Tool joint size accounting and drill-string element’s length flexibility
+	Pipe ID/OD and Tooljoint size accounting and drill-string element’s length flexibility
 	Inclusion and Exclusion capability of Noise effects while Drilling
 	Selection flexibility for Open and Cased Hole Friction Factor 
 	Stribeck Friction effect (Accounting of Exponential Non-linear Static to Dynamic Coulomb Friction Transition)
@@ -647,7 +647,7 @@ Wellbore Inclination: Added wellbore inclination into model to account for vario
 Mud Velocity Effect: Added mud flow based viscous drag along the borehole to account for net frictional force comprises of Coulomb and Viscous forces and Torque coupled.
 Mud-pumps Flow Rate: Incorporated mud-pumps flow rate into model to account for the RPM input to the Mud motor’s rotor element which feeds additional rpm to the drill bit in rotate mode. Fluid Compressibility is not included into model yet, part of future integration.
 Mud Motor/Downhole Motor Integration: Accounted for downhole mud motor in drill-string to counter both Slide and Rotate mode of drilling using downhole motor.
-Pipe Rocking Phenomenon in Slide mode: Added pipe-rocking phenomenon in model in Slide mode of drilling with downhole motor by providing to and fro motion to Topdrive rotary and break the additional drag along the axial direction of drill-string elements by keeping the tool-face intact
+Pipe Rocking Phenomenon in Slide mode: Added pipe-rocking phenomenon in model in Slide mode of drilling with downhole motor by providing to and fro motion to Topdrive rotary and break the additional drag along the axial direction of drillstring elements by keeping the tool-face intact
 Motor back-off Events Testing: Drilling simulator possesses capability to test various cases of motor stall events.
 Low Friction Stabilizers and Lubrication Trials: Lubrication trials and low friction stabilizers in BHA dynamics can be modeled using drilling simulator.
 Drilling Simulator: Under Development Features
