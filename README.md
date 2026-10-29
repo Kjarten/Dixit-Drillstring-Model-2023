@@ -384,17 +384,17 @@ Note: $μ_{effective}$ and  $V_{CS}$ (Stribeck critical velocity) accounts for v
 </div>
 <p align="center">Figure 8: Friction Model (a) SPE-199678-MS (b) Friction Model of current drilling simulator </p>
 
-| Mud Type | Dynamic Friction Coefficient($μ_k$) | Static Friction Coefficient ($μ_s$) |
-| -------- | ----------------------------------- | ----------------------------------- |
-| Typical Oil based | 0.20 | 0.25 |
-| Micronized Oil-based | 0.15 | 0.20 |
-| KCI Polymer Water-based | 0.30 | 0.40 |
+| Mud Type                | Dynamic Friction Coefficient($μ_k$) | Static Friction Coefficient ($μ_s$) |
+| ----------------------- | ----------------------------------- | ----------------------------------- |
+| Typical Oil based       | 0.20                                | 0.25                                |
+| Micronized Oil-based    | 0.15                                | 0.20                                |
+| KCI Polymer Water-based | 0.30                                | 0.40                                |
 
 Table 4: Typical values for Static and Dynamic Friction Coefficients
 
 **Friction Model Input Parameters**
 
-- Dia_{Pipe-equivalent} is used in the model to compensate for the size difference between drill-pipe and Tooljoint:
+- $Dia_{Pipe-equivalent}$ is used in the model to compensate for the size difference between drillpipe and Tooljoint:
 
 $$
 Dia_{Pipe-equivalent}=\frac{(27×Dia_{pipe} )+(3×Dia_{Tooljoint} )}{30}
@@ -474,20 +474,34 @@ Note:
 - Formation CCS: 20 ksi 
 - Drill-string Elements: 5 (3 DP + 1 HWDP + 1 Collar)
 
-Case 1: Drill-string dynamics under different Drilling and Tripping operations phases
+**Case 1: Drill-string dynamics under different Drilling and Tripping operations phases**
+
+<div align="center">
+  <img src="https://github.com/Kjarten/Dixit-Drillstring-Model-2023/blob/main/Documentation/Surface_and_downhole_parameters_variation_during_various_phases_of_drilling_operations.png?raw=true" alt="Surface and downhole parameters variation during various phases of drilling operations">
+</div>
+<p align="center">Figure 9: Surface and downhole parameters variation during various phases of drilling operations</p>
+
+<div align="center">
+  <img src="https://github.com/Kjarten/Dixit-Drillstring-Model-2023/blob/main/Documentation/Variation_of_Axial_velocity_of_different_elements_during_various_phases_of_drilling_operations.png?raw=true" alt="Variation of Axial velocity of different elements during various phases of drilling operations">
+</div>
+<p align="center">Figure 10: Variation of Axial velocity of different elements during various phases of drilling operations</p>
  
-Figure 8: Surface and downhole parameters variation during various phases of drilling operations
- 
-Figure 9: Variation of Axial velocity of different elements during various phases of drilling operations
-Figure 8 and 9 shows the variation of surface and downhole parameters of drill-string under different phases of drilling operations,
-	Phase 1 Drilling – In Phase 1, topdrive axial velocity and RPM are ramped to 27 m/hr. and 120 respectively, and allows to achieve steady-state conditions. Drilling continued for 120 seconds when all elements demonstrate steady-state behavior.
-	Phase 2 Topdrive Stationary Axially – Topdrive is bring to rest and not allowed further axial motion, RPM from drum continued to be provided to the drill-string and allowed system to achieve steady-state for next 30 Seconds.
-	Phase 3 POOH with Rotation – Topdrive is picked up with 27 m/hr. axial velocity and string is POOH with rotation and allowed to achieve steady-state for remaining session of the run.
-It is evident from Figure 9, that it takes approx. 110-120 Seconds for the topdrive energy to get transferred to bit, as the friction forces at different elements of the drill-string have to break over the Static friction before they initiate movement and transfer energy to the element below. Once, in Phase 3, no reaction forces will act on bit that were pre-dominant during the Phase 1, and this reduces the lag of energy transfer between the elements of drill-string.
-Case 2: Axial Stiction along the length of drill-string in the absence of Topdrive drum RPM during Tripping in hole
- 
-Figure 10: Variation of Axial velocity of different elements while tripping in hole in the absence of drum RPM
-Figure 10, shows the variation of axial velocity at different drill-string elements including drill-bit while tripping in hole, in the absence of drum RPM. The axial stick and slip phases confirms that the axial drag will be pre-dominant in the absence of rotary speed. String elements have to undergo higher loads to break the static friction and transfer energy to the element below. This phenomenon was not present in previous case, as rotary speed helps to counter the axial drag during tripping and drilling phases and provide ease for element motion along the well-path. This stick effect will be severe in deviated wells in comparison to vertical wells.
+Figure 9 and 10 shows the variation of surface and downhole parameters of drill-string under different phases of drilling operations,
+- Phase 1 Drilling – In Phase 1, topdrive axial velocity and RPM are ramped to 27 m/hr. and 120 respectively, and allows to achieve steady-state conditions. Drilling continued for 120 seconds when all elements demonstrate steady-state behavior.
+- Phase 2 Topdrive Stationary Axially – Topdrive is bring to rest and not allowed further axial motion, RPM from drum continued to be provided to the drill-string and allowed system to achieve steady-state for next 30 Seconds.
+- Phase 3 POOH with Rotation – Topdrive is picked up with 27 m/hr. axial velocity and string is POOH with rotation and allowed to achieve steady-state for remaining session of the run.
+
+It is evident from Figure °0, that it takes approx. 110-120 Seconds for the topdrive energy to get transferred to bit, as the friction forces at different elements of the drill-string have to break over the Static friction before they initiate movement and transfer energy to the element below. Once, in Phase 3, no reaction forces will act on bit that were pre-dominant during the Phase 1, and this reduces the lag of energy transfer between the elements of drill-string.
+
+**Case 2: Axial Stiction along the length of drill-string in the absence of Topdrive drum RPM during Tripping in hole**
+
+<div align="center">
+  <img src="https://github.com/Kjarten/Dixit-Drillstring-Model-2023/blob/main/Documentation/Variation_of_Axial_velocity_of_different_elements_while_tripping_in_hole_in_the_absence_of_drum_RPM.png?raw=true" alt="Variation of Axial velocity of different elements while tripping in hole in the absence of drum RPM">
+</div>
+<p align="center">Figure 11: Variation of Axial velocity of different elements while tripping in hole in the absence of drum RPM</p>
+
+Figure 11, shows the variation of axial velocity at different drill-string elements including drill-bit while tripping in hole, in the absence of drum RPM. The axial stick and slip phases confirms that the axial drag will be pre-dominant in the absence of rotary speed. String elements have to undergo higher loads to break the static friction and transfer energy to the element below. This phenomenon was not present in previous case, as rotary speed helps to counter the axial drag during tripping and drilling phases and provide ease for element motion along the well-path. This stick effect will be severe in deviated wells in comparison to vertical wells.
+
 ### Mud Motor Integrated Drilling Simulator: Methodology
 
 Formulation of coupled Axial-torsional drilling simulator lumped parameter model has been documented in earlier section.  This section accounts for the integration of downhole motor into existing drilling simulator model.
