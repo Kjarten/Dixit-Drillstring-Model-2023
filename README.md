@@ -153,7 +153,9 @@ Note: Values of $RPM_{SS}$, $ROP_{SS}$ and $DOC_{SS}$ are held the same for all 
 
 Linear empirical relation between rock cutting parameter $μ_{Rock}$ and confined compressive strength of rock CCS is as follows:
 
-$μ_{Rock}=(-0.0201×CCS)+1.5333$
+$$
+μ_{Rock}=(-0.0201×CCS)+1.5333
+$$
 
 <div align="center">
   <img src="https://github.com/Kjarten/Dixit-Drillstring-Model-2023/blob/main/Documentation/Relationship_between_mu_Rock_and_Rock_strength.jpg?raw=true" alt="Relationship between μ_Rock and Rock strength">
@@ -213,12 +215,13 @@ Table 2: Coefficient of Friction of Rock Vs Rock Strength
 | 0 | - | $k_{TQ}×DOC_{current iteration}$ |  |
 
 Table 3: Bit Reaction Force and Torque components variation with sliding velocities
-Axial and Rotary Borehole Viscous Damper: The Viscous damping effects due to mud flow in the borehole is also accounted in the simulator,
+
+**Axial and Rotary Borehole Viscous Damper:** The Viscous damping effects due to mud flow in the borehole is also accounted in the simulator,
+
 Under Steady-State conditions, we get,
 
-	c_(t-borehole)=7500-20000 
-
-	c_(a-borehole)=c_(t-borehole)×(〖ROP〗_ss/((〖RPM〗_SS )×(π×D_(Tool-joint) ) ))
+- $c_{t-borehole}=7500-20000$
+- $c_{a-borehole}=c_{t-borehole}×(ROP_{ss}/((RPM_{SS} )×(π×D_{Tool-joint} ) ))$
 
 
 Note:  
