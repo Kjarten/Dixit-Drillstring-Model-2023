@@ -389,6 +389,7 @@ Note: $μ_{effective}$ and  $V_{CS}$ (Stribeck critical velocity) accounts for v
 | Typical Oil based | 0.20 | 0.25 |
 | Micronized Oil-based | 0.15 | 0.20 |
 | KCI Polymer Water-based | 0.30 | 0.40 |
+
 Table 4: Typical values for Static and Dynamic Friction Coefficients
 
 **Friction Model Input Parameters**
@@ -418,17 +419,24 @@ Coulomb Friction Force_{Tangential}=(\frac{Sliding Velocity_{Tangential Componen
 $$
 	
 - Coulomb Friction Torque Tangential Component:
-〖Coulomb Friction Torque〗_Tangential=〖Coulomb Friction Force〗_Tangential× 0.5×〖Dia〗_(Pipe-equivalent)
 
-	Viscous Friction Force Axial Component:
+$$
+Coulomb Friction Torque_{Tangential} = Coulomb Friction Force_{Tangential}× 0.5×Dia_{Pipe-equivalent}
+$$
 
-If pumps are on, then there will be an axial drag accounting for the sliding relative velocity between the pipe velocity and fluid velocity. Currently, V_Mud=0.
+- Viscous Friction Force Axial Component:
+
+If pumps are on, then there will be an axial drag accounting for the sliding relative velocity between the pipe velocity and fluid velocity. Currently, $V_{Mud}=0$.
 
 If pumps are on,
 
-〖Viscous Force〗_Axial=f(V_Axial,V_Mud)
+$$
+Viscous Force_{Axial}=f(V_{Axial},V_{Mud})
+$$
+
 i.e.
-〖Viscous Force〗_(Axial-pipe)=〖ca〗_(borehole-viscous)×(V_Axial )×(((D_pipe^2 ))/((D_hole^2 )-(D_pipe^2 ) ))
+$$
+Viscous Force_{Axial-pipe}=ca_{borehole-viscous}×V_{Axial}×(\frac{D_{pipe}^2 }{D_{hole}^2 -D_{pipe}^2 })
 
 
 	Viscous Friction Force Tangential Direction Component:
