@@ -114,18 +114,18 @@ Table 1: Model Input Parameters
 
 	Steady-State Parameters for 2000 Psi CCS Value
 
-	〖WOB〗_SS = 1500 lbs
-	〖ROP〗_SS = 27 m/hr.
-	〖RPM〗_SS = 120 rpm
-	〖DOC〗_SS =  〖ROP〗_ss/〖RPM〗_ss  = 0.147 inch/rev
-Note: Values of 〖RPM〗_SS, 〖ROP〗_SS and 〖DOC〗_SS are held the same for all simulation runs to have uniformity and robustness in model for different sensitivity cases. Initial model tuning parameters is taken to be conservative to setup the problem in simulator.
+     $WOB_SS = 1500 lbs$
+	 $ROP_SS = 27 m/hr$
+	 $RPM_SS = 120 rpm$
+	 $DOC_SS =  ROP_ss/RPM_ss  = 0.147 inch/rev$
+Note: Values of $RPM_SS$, $ROP_SS$ and $DOC_SS$ are held the same for all simulation runs to have uniformity and robustness in model for different sensitivity cases. Initial model tuning parameters is taken to be conservative to setup the problem in simulator.
 	Calculation of Other Model Inputs 
 
-	Top-drive Axial Velocity of Draw-works (V_o)
+	Top-drive Axial Velocity of Draw-works ($V_o$)
 
-	Top-drive Angular Velocity of Drum (ω_o)
+	Top-drive Angular Velocity of Drum ($ω_o$)
 
-Coefficient of Friction of Rock (μ_Rock):
+Coefficient of Friction of Rock ($μ_Rock$):
 
 	Linear empirical relation between rock cutting parameter μ_Rock and confined compressive strength of rock CCS is as follows:
 
