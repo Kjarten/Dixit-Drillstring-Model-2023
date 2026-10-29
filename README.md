@@ -116,8 +116,9 @@ k_t=\frac{(G×J)}{L}
 $$
 
 Where,
+
 $$
-J=  \frac{π}{32}×(D_o^4-D_i^4)
+J= \frac{π}{32}×(D_o^4-D_i^4)
 $$
 
 Note: For Steel, $E = 210 GPa$ and $G = 79.3 GPa$ 
