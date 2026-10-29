@@ -221,7 +221,7 @@ Table 3: Bit Reaction Force and Torque components variation with sliding velocit
 Under Steady-State conditions, we get,
 
 - $c_{t-borehole}=7500-20000$
-- $c_{a-borehole}=c_{t-borehole}×(ROP_{ss}/((RPM_{SS} )×(π×D_{Tool-joint} ) ))$
+- $c_{a-borehole}=c_{t-borehole}×(\frac{ROP_{ss}}{((RPM_{SS} )×(π×D_{Tool-joint} ) )})$
 
 
 Note:  
