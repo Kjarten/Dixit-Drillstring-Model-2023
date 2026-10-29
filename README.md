@@ -374,34 +374,50 @@ If, static friction calculated above is less than ($μ_s×F_n$), where $μ_s>μ_
 Also, to avoid discontinuity at $V_{iteration}$ tends to 0, we use Stribeck friction model (1902). To account this, Tustin (1947) proposes the following formulation:
 
 $$
-μ_{effective}=μ_{mud-dynamic}+((μ_{mud-static}-μ_{mud-dynamic} )×e^{-(\frac{|Sliding Velocity_{Resultant} |}{V_{CS}} ) } )
+μ_{effective}=μ_{mud-dynamic}+(μ_{mud-static}-μ_{mud-dynamic} )×e^{-(\frac{|Sliding Velocity_{Resultant} |}{V_{CS}} ) }
 $$
 
 Note: $μ_{effective}$ and  $V_{CS}$ (Stribeck critical velocity) accounts for velocity weakening effect into model dynamics
 
+<div align="center">
+  <img src="https://github.com/Kjarten/Dixit-Drillstring-Model-2023/blob/main/Documentation/Friction_Model.png?raw=true" alt="Friction Model">
+</div>
+<p align="center">Figure 8: Friction Model (a) SPE-199678-MS (b) Friction Model of current drilling simulator </p>
 
-  
-Figure 7: Friction Model (a) SPE-199678-MS (b) Friction Model of current drilling simulator 
-Mud Type	Dynamic Friction Coefficient(μ_k)	Static Friction Coefficient (μ_s)
-Typical Oil based	0.2	0.25
-Micronized Oil-based	0.15	0.2
-KCI Polymer Water-based	0.3	0.4
+| Mud Type | Dynamic Friction Coefficient($μ_k$) | Static Friction Coefficient ($μ_s$) |
+| -------- | ----------------------------------- | ----------------------------------- |
+| Typical Oil based | 0.20 | 0.25 |
+| Micronized Oil-based | 0.15 | 0.20 |
+| KCI Polymer Water-based | 0.30 | 0.40 |
 Table 4: Typical values for Static and Dynamic Friction Coefficients
-Friction Model Input Parameters
 
-	〖Dia〗_(Pipe-equivalent) is used in the model to compensate for the size difference between drill-pipe and Tooljoint:
-〖Dia〗_(Pipe-equivalent)=((27×〖Dia〗_pipe )+(3×〖Dia〗_(Tooljoint) ))/30
-	Coulomb Friction Force:
+**Friction Model Input Parameters**
 
-Coulomb Friction Force=μ_effective×F_Normal
-	Coulomb Friction Force Axial Component:
+- Dia_{Pipe-equivalent} is used in the model to compensate for the size difference between drill-pipe and Tooljoint:
 
-〖Coulomb Friction Force〗_Axial=(〖Sliding Velocity〗_(Axial Component)/|〖Sliding Velocity〗_Resultant | )× Coulomb Friction Force
+$$
+Dia_{Pipe-equivalent}=\frac{(27×Dia_{pipe} )+(3×Dia_{Tooljoint} )}{30}
+$$
 
-	Coulomb Friction Force Tangential Component:
+- Coulomb Friction Force:
 
-〖Coulomb Friction Force〗_Tangential=(〖Sliding Velocity〗_(Tangential Component)/|〖Sliding Velocity〗_Resultant | )× Coulomb Friction Force
-	Coulomb Friction Torque Tangential Component:
+$$
+Coulomb Friction Force=μ_{effective}×F_{Normal}
+$$
+
+- Coulomb Friction Force Axial Component:
+
+$$
+Coulomb Friction Force_{Axial}=(\frac{Sliding Velocity_{Axial Component}}{|Sliding Velocity_{Resultant} |})× Coulomb Friction Force
+$$
+
+- Coulomb Friction Force Tangential Component:
+
+$$
+Coulomb Friction Force_{Tangential}=(\frac{Sliding Velocity_{Tangential Component}}{|Sliding Velocity_{Resultant} |} )× Coulomb Friction Force
+$$
+	
+- Coulomb Friction Torque Tangential Component:
 〖Coulomb Friction Torque〗_Tangential=〖Coulomb Friction Force〗_Tangential× 0.5×〖Dia〗_(Pipe-equivalent)
 
 	Viscous Friction Force Axial Component:
