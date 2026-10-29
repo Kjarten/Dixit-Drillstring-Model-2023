@@ -257,6 +257,10 @@ $$
 [M] \ddot{Z}+ [C_a] \dot{Z}+ [K_a] Z+f_{fric}=F_{forcing}
 $$
 
+$$
+[J] \ddot{\theta}+ [C_t] \dot{\theta} + [K_t] \theta + \tau_{fric} = \tau_{forcing}
+$$
+
 Where,
 
 	Z_o= ∫▒〖V_0 dt〗
