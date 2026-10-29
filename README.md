@@ -150,7 +150,7 @@ Note: $k_{WOB}$ is calculated assuming a linear model. Value of $k_{WOB}$ is als
 
 Coefficient of Torque ($k_{TQ}$):
 - $k_{TQ}=TQ_{bit}/DOC_{bit}$
-- $k_{TQ}=(k_{WOB} )×(Dia_{Hole})×(μ_{Rock}/3)$
+- $k_{TQ}=(k_{WOB} )×(Dia_{Hole})×(\frac{μ_{Rock}}{3})$
 
 
 | Rock Strength (Psi) | $μ_{Rock}$ |
