@@ -232,7 +232,7 @@ Note:
 **GOVERNING EQUATIONS:**
 
 $$
-mZ̈ + k_a (Z-Z_o )+F_{Friction (Coulomb+Viscous)}+F_{Formation Reaction}=0
+m\ddot{Z} + k_a (Z-Z_o )+F_{Friction (Coulomb+Viscous)}+F_{Formation Reaction}=0
 $$
 
 Jθ ̈+k_t (θ-θ_o )+〖TQ〗_(Friction (Coulomb+Viscous))+〖TQ〗_Formation Reaction=0   
