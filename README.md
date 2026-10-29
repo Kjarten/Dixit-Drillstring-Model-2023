@@ -135,7 +135,7 @@ Note: For Steel, $E = 210 GPa$ and $G = 79.3 GPa$
 
 Table 1: Model Input Parameters
 
-Steady-State Parameters for 2000 Psi CCS Value:
+**Steady-State Parameters for 2000 Psi CCS Value:**
 
 - $WOB_{SS} = 1500 lbs$
 - $ROP_{SS} = 27 m/hr$
