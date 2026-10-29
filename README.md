@@ -142,26 +142,24 @@ Note: CCS of formation limits to 60 ksi to give stable robust solutions, as beyo
 
 	Coefficient of WOB ($k_WOB$): 
 
-k_WOB=〖WOB〗_(Cutting Component)/〖DOC〗_bit 
+$k_{WOB}=WOB_{(Cutting Component)}/{DOC_bit} $
 
-k_WOB=(0.8 )×(0.5×CCS)×(1500*4.45)×(1/〖DOC〗_ss )×(〖Dia〗_Hole/(12.25))
+$k_{WOB}=(0.8 )×(0.5×CCS)×(1500*4.45)×(1/DOC_{ss} )×(Dia_{Hole}/(12.25))$
 where, 0.5  is model constant for Rock Strength with units in (1/ksi) 
-Note: k_WOB is calculated assuming a linear model. Value of k_WOB is also a function of CCS of formation. 
+Note: $k_{WOB}$ is calculated assuming a linear model. Value of $k_{WOB}$ is also a function of CCS of formation. 
 
-	Coefficient of Torque (k_TQ):
-k_TQ=〖TQ〗_bit/〖DOC〗_bit 
-k_TQ=(k_WOB )×(〖Dia〗_Hole )×(μ_Rock/3)
+Coefficient of Torque ($k_{TQ}$):
+$k_{TQ}=TQ_{bit}/DOC_{bit}$
+$k_{TQ}=(k_{WOB} )×(Dia_{Hole})×(μ_{Rock}/3)$
 
-Rock Strength (Psi)	μ_Rock
-2000	1.4931
 
-6000	1.4127
-
-20000	1.1313
-
-40000	0.7293
-
-60000	0.3273
+| Rock Strength (Psi) | $μ_{Rock}$ |
+| ---------- | ------ |
+| 2000 | 1.4931 |
+| 6000 | 1.4127 |
+| 20000 | 1.1313 |
+| 40000 | 0.7293 |
+| 60000 | 0.3273 |
 
 Table 2: Coefficient of Friction of Rock Vs Rock Strength
 
