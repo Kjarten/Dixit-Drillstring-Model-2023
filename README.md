@@ -49,7 +49,7 @@ Majority of existing technical papers published on drilling dynamics provide mat
 Figure 1: Different Model Types and Range of Complexity (Ref: SPE/IADC-194082-MS)
 
 <div align="center">
-  <img src="https://example.com" alt="Different Model Types and Range of Complexity">
+  <img src="https://github.com/Kjarten/Dixit-Drillstring-Model-2023/blob/main/Documentation/Different_Model_Types_and_Range_of_Complexity.png?raw=true" alt="Different Model Types and Range of Complexity">
 </div>
 
 Degrees of Freedom (DOF) are the number of variables that determine the state of the physical system (Figure 3). DOF can vary from a lumped-parameter model with one DOF (a point mass on a line, e.g. [Rudat and Dashevskiy](https://onepetro.org/SPEDC/proceedings-abstract/11DC/11DC/SPE-139996-MS/149403), 2011), to multi-body models which contain several DOF ([Abbassian and Dunayevkiy](https://onepetro.org/DC/article-abstract/13/02/99/170167/Application-of-Stability-Approach-to-Torsional-and?redirectedFrom=fulltext), 1998 extended a lumped parameter model to include lateral motion). Lumped parameter models consist of rigid masses separated by kinematic pairs of dashpots, and are a function of time only. Bailey et al, 2008 describe a 2D model made of one-foot bodies (so many DOFs) connected by "massless beam spring elements" which can describe lateral displacement and bending moments. The other end of the spectrum is distributed-parameter models (e.g. Dykstra et al 2001), in which the parameters are distributed in both time and length along the drill-string and wave propagation is taken into account. Distributed parameter models can have many DOF's and can be very complex.
