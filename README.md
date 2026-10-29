@@ -225,7 +225,7 @@ Under Steady-State conditions, we get,
 
 
 Note:  
-- Units of $c_{t-borehole}$, $c_{a-borehole} and c_{borehole-resultant} in  ‘N-sec/m’
+- Units of $c_{t-borehole}$, $c_{a-borehole}$ and $c_{borehole-resultant}$ in  ‘N-sec/m’
 - Drilling simulator accounts for the well path trajectory and variation of TQ along the string length to include the distribution of dynamics along the string.
 - Values of Viscous dampers are held constants during simulation but the Viscous frictional force will vary depending on the axial and tangential sliding velocities
 
