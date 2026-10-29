@@ -76,10 +76,11 @@ Figure 2: Drilling Simulator Axial Motion Schematic
  
 Figure 3: Drilling Simulator Rotary Motion Schematic
 
-	Drill-String Model Parameters:
+Drill-String Model Parameters:
 
-	Effective Mass Moment of Inertia ($J$):  Mass moment of inertia is being calculated about the Z axis as,
-$J=1/4×m×(D_o^2+D_i^2 )$
+- Effective Mass Moment of Inertia ($J$):  Mass moment of inertia is being calculated about the Z axis as,
+$$J=1/4×m×(D_o^2+D_i^2 )$$
+
 Where, m is the lumped mass of the drill-string element under consideration. 
 	Area of Cross-section (A):  Area of Cross-section of Drill-String elements is being calculated as,
 $A=π/4×(D_o^2-D_i^2 )$
