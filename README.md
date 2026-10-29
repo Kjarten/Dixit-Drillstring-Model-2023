@@ -239,9 +239,17 @@ $$
 J\ddot{\theta} + k_t (\theta-\theta_o )+TQ_{Friction (Coulomb+Viscous)}+TQ_{Formation Reaction}=0
 $$
 
-F_Formation Reaction=〖WOB〗_downhole
-〖TQ〗_Formation Reaction=〖TQ〗_downhole
-〖WOB〗_downhole= (F_Formation Reaction Cutting Component ) + (F_Formation Reaction Frictional Component )
+$$
+F_{Formation Reaction}=WOB_{downhole}
+$$
+
+$$
+TQ_{Formation Reaction}=TQ_{downhole}
+$$
+
+$$
+WOB_{downhole} = (F_{Formation Reaction Cutting Component}) + (F_{Formation Reaction Frictional Component})
+$$
 
 In Vector form above equations takes the form:
 
