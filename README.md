@@ -254,7 +254,7 @@ $$
 In Vector form above equations takes the form:
 
 $$
-\left\{M\}\ddot{Z}+\{C_a\}\dot{Z}+\{K_a\}Z+f_{fric}=F_{forcing}
+\{ M \} \ddot{Z}+ \{ C_a \} \dot{Z}+ \{ K_a \} Z+f_{fric}=F_{forcing}
 $$
 
 Where,
