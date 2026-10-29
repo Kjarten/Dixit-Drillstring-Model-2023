@@ -102,18 +102,14 @@ Note: For Steel, $E = 210 GPa$ and $G = 79.3 GPa$
 
 **Calculations of Model Input parameters:**
 
-Parameters	Well 1	
-Well 2
-Section TD	5864 m	
-2762 m
-Drill-pipe OD	6.625’’	
-5.875’’
-Tool-joint Size	8.5’’	
-7’’
-Hole Section (Diameter)	12.25’’	
-12.25’’
-CCS formation	2000-60000 Psi	
-2000-60000 Psi
+| Parameters | Well 1 | Well 2 |
+| ---------- | ------ | ------ |
+| Section TD | 5864 m | 2762 m |
+| Drillpipe OD | 6.625’’ | 5.875’’ |
+| Tool-joint Size | 8.5’’ | 7’’ |
+| Hole Section (Diameter) | 12.25’’ | 12.25’’ |
+| CCS formation | 2000-60000 Psi | 2000-60000 Psi |
+
 Table 1: Model Input Parameters
 
 	Steady-State Parameters for 2000 Psi CCS Value
