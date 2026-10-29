@@ -317,6 +317,7 @@ WOB_{bit}= (k_{WOB}×DOC_{iteration})+(c_{bit-axial}×\dot{Z}_{bit-iteration})
 $$
 
 - Downhole Bit Torque: 
+
 $$
 TQ_{bit} = (k_{TQ}×DOC_{iteration array})×(±1)
 $$
@@ -329,16 +330,22 @@ $$
 ### Friction Model
 
 Modeling friction forces along the length of drill-string is challenging due to the non-linear behavior of system with ever changing velocity direction. Net frictional force is a strong function of the sliding velocity. The axial component of the frictional force contributes to the drag force whereas, the tangential component of the frictional force generates a frictional torque in the system.
+
 As the force of friction increases, the friction force introduces a negative damping effect when the sliding velocity gets close to zero. This negative damping generates stick-slip dysfunction even in the case when bit is off-bottom. In deviated wells, the topdrive axial velocity of draw-works and rpm of drum does not get transferred to the bit instantly, the elements of the drill-string have to overcome the static limits of friction to transfer the energy to the next element. This lag of energy transfer is generated effectively by the Stribeck curve, where net frictional torque decays with increase in sliding velocity.
+
 To better understand the dynamics of system with the introduction of the friction model, model input parameters are calculated below to provide overview of the various forces and torque components acting on different drill-string elements in the axial and tangential directions.
 
-Buoyant Factor (B_f):  
-B_f=(ρ_s-ρ_m)/ρ_s 
+**Buoyant Factor ($B_f$):**
+$$
+B_f=\frac{ρ_s-ρ_m}{ρ_s} 
+$$
 Where,
-	ρ_s is density of drill-pipe/BHA material (Steel: 7840  kg/m^3 ) 
-	ρ_m is density of drilling mud (NAF based: 1350 kg/m^3 )
-	From here, B_f = 0.83 (B_f is a function of the density of pipe and mud-weight)
-Normal Force (F_(n,iteration)): 
+- $ρ_s$ is density of drill-pipe/BHA material (Steel: 7840  kg/m^3 ) 
+- $ρ_m$ is density of drilling mud (NAF based: 1350 kg/m^3 )
+- From here, $B_f$ = 0.83 (B_f is a function of the density of pipe and mud-weight)
+
+**Normal Force ($F_{n,iteration}):**
+
 F_Normal=(B_f×M_(BHA-effective)×g×sin⁡θ )
 	θ= inclination angle of wellbore (in °), including well trajectory for general case (discrete distribution of drill-string elements length Vs Inclination Angle)
 	g = acceleration due to gravity (9.81m/〖sec〗^2 )
