@@ -437,42 +437,43 @@ $$
 i.e.
 $$
 Viscous Force_{Axial-pipe}=ca_{borehole-viscous}×V_{Axial}×(\frac{D_{pipe}^2 }{D_{hole}^2 -D_{pipe}^2 })
+$$
 
+- Viscous Friction Force Tangential Direction Component:
 
-	Viscous Friction Force Tangential Direction Component:
+$$
+Viscous Force_{Tangential} = ct_{borehole-viscous}×(\omega×0.5×Dia_{Pipe-equivalent} )
+$$
 
-〖Viscous Force〗_Tangential=〖ct〗_(borehole-viscous)×(ω×0.5×〖Dia〗_(Pipe-equivalent) )
+$$
+Viscous Torque_{Tangential} = Viscous Force_{Tangential}×(0.5×Dia_{Pipe-equivalent} )
+$$
 
-〖Viscous Torque〗_Tangential=〖Viscous Force〗_Tangential×(0.5×〖Dia〗_(Pipe-equivalent) )
+- Axial and Tangential Components of Net Frictional Force and Torque: 
 
-	Axial and Tangential Components of Net Frictional Force and Torque: 
+$$
+Net Frictional Force_{Axial} = (Coulomb Friction Force_{Axial} )+(Viscous Friction Force_{Axial} )
+$$
 
-〖Net Frictional Force〗_Axial=(〖Coulomb Friction Force〗_Axial )+(〖Viscous Friction Force〗_Axial )
-
-
-〖Net Frictional Force〗_Tangential=(〖Coulomb Friction Torque〗_Tangential )+(〖Viscous Friction Torque〗_Tangential )
-
+$$
+Net Frictional Force_{Tangential}=(Coulomb Friction Torque_{Tangential})+(Viscous Friction Torque_{Tangential} )
+$$
 
 Note: 
 
-	Units of c_(t-borehole) and c_(a-borehole) in ‘N-sec/m’
-
-	The order of viscous damping constants (c_(t-borehole) and c_(a-borehole)) which acts as a model-tuning parameters, is kept consistent to keep the system in ideal damp state depending on the field data.
-
-
-
-
-	To account for the borehole dampers distribution in case of multi-element string, we consider to take the damper values for elements in fraction of their mass contributing, i.e., 50% for Collars, 30% for HWDP and 20% for the drill-pipes. This can be further optimized to be more realistic in alignment with field data.
-
-	Numerical Data presented in the document has been taken from Eric Cayeux’s work: SPE- 199678-MS, “Analysis of Torsional Stick-slip Situations Observed with Downhole High Frequency Magnetometer Data”
+- Units of $c_{t-borehole}$ and $c_{a-borehole}$ in ‘N-sec/m’
+- The order of viscous damping constants ($c_{t-borehole}$ and $c_{a-borehole}) which acts as a model-tuning parameters, is kept consistent to keep the system in ideal damp state depending on the field data.
+- To account for the borehole dampers distribution in case of multi-element string, we consider to take the damper values for elements in fraction of their mass contributing, i.e., 50% for Collars, 30% for HWDP and 20% for the drill-pipes. This can be further optimized to be more realistic in alignment with field data.
+- Numerical Data presented in the document has been taken from Eric Cayeux’s work: SPE- 199678-MS, “Analysis of Torsional Stick-slip Situations Observed with Downhole High Frequency Magnetometer Data”
 
 ### Special Cases: Drilling Simulator in the Absence of Mud-motor
 
-Well: Hebron P1D-OP17 12.25” hole-section
-Max Well Inclination: 60^0
-Drill-string Length: ~2600 m.
-Formation CCS: 20 ksi 
-Drill-string Elements: 5 (3 DP + 1 HWDP + 1 Collar)
+- Well: Hebron P1D-OP17 12.25” hole-section
+- Max Well Inclination: 60^0
+- Drill-string Length: ~2600 m.
+- Formation CCS: 20 ksi 
+- Drill-string Elements: 5 (3 DP + 1 HWDP + 1 Collar)
+
 Case 1: Drill-string dynamics under different Drilling and Tripping operations phases
  
 Figure 8: Surface and downhole parameters variation during various phases of drilling operations
@@ -667,27 +668,28 @@ Note:
 ### Drilling Simulator: Developed Features
 
 Formulation of Coupled Axial-torsional Multi Elements Drill-string dynamics lumped parameter model has been documented. To assess the consistency of results across various Friction Models in future and also during modifications in existing model strategy, different sensitivity cases are tested and documented to account for numerical stability. These cases are of significant value to test the robustness of model under different Topdrive and Downhole conditions. 
+
 They are categorized as follows:
-	Number of Drill-string Elements (Segregation into Drill-pipes, HWDP, Collars and mud-motor elements)
-	Flexibility to choose different Topdrive ROP and RPM Input function  (Constant, Ramp or Step)
-	CCS of Formation (Numerically Stable solution for as high as 60000 Psi Rock Strength)
-	Bit/Hole size and Number of Bit-blades (Symmetrical or Asymmetrical Blade positioning)
-	Drill-pipe, HWDP and Collar size elements flexibility
-	Tripping In/Out of hole, Drilling and Back-reaming operations
-	Torque and Drag testing using side forces (Well-path inclination dependent)
-	Tracking of Drilling Vs Tripping phase (Hole-depth Vs Bit Depth Positioning Tracker)
-	Independent Rotary and Axial motion (SO/PU operations) 
-	Pipe ID/OD and Tooljoint size accounting and drill-string element’s length flexibility
-	Inclusion and Exclusion capability of Noise effects while Drilling
-	Selection flexibility for Open and Cased Hole Friction Factor 
-	Stribeck Friction effect (Accounting of Exponential Non-linear Static to Dynamic Coulomb Friction Transition)
-	Net frictional force accounting for borehole friction (Coulomb + Viscous)
-	Well-bore inclination Angle (Well trajectory)
-	Mud-Pumps Flow Rate (to feed Mud-motor input RPM)
-	Slide and Rotate mode of drilling with Mud-motor (Flexibility of placing motor at different positions in BHA)
-	Pipe Rocking phenomenon in Slide mode of drilling with Mud-motor 
-	Motor Back-off Event testing capability in Slide Mode (with drilling depths having different Rock-strength)
-	Low Friction Stabilizer and Lubrication trials testing capability
+- Number of Drill-string Elements (Segregation into Drill-pipes, HWDP, Collars and mud-motor elements)
+- Flexibility to choose different Topdrive ROP and RPM Input function  (Constant, Ramp or Step)
+- CCS of Formation (Numerically Stable solution for as high as 60000 Psi Rock Strength)
+- Bit/Hole size and Number of Bit-blades (Symmetrical or Asymmetrical Blade positioning)
+- Drill-pipe, HWDP and Collar size elements flexibility
+- Tripping In/Out of hole, Drilling and Back-reaming operations
+- Torque and Drag testing using side forces (Well-path inclination dependent)
+- Tracking of Drilling Vs Tripping phase (Hole-depth Vs Bit Depth Positioning Tracker)
+- Independent Rotary and Axial motion (SO/PU operations) 
+- Pipe ID/OD and Tooljoint size accounting and drill-string element’s length flexibility
+- Inclusion and Exclusion capability of Noise effects while Drilling
+- Selection flexibility for Open and Cased Hole Friction Factor 
+- Stribeck Friction effect (Accounting of Exponential Non-linear Static to Dynamic Coulomb Friction Transition)
+- Net frictional force accounting for borehole friction (Coulomb + Viscous)
+- Well-bore inclination Angle (Well trajectory)
+- Mud-Pumps Flow Rate (to feed Mud-motor input RPM)
+- Slide and Rotate mode of drilling with Mud-motor (Flexibility of placing motor at different positions in BHA)
+- Pipe Rocking phenomenon in Slide mode of drilling with Mud-motor 
+- Motor Back-off Event testing capability in Slide Mode (with drilling depths having different Rock-strength)
+- Low Friction Stabilizer and Lubrication trials testing capability
 
 Number of Drill-string Elements: Segregate number of string elements as per the model flexibility and well path
 ROP Topdrive Input Function: Ramp Up/down 
