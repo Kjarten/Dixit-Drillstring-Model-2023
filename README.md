@@ -101,11 +101,11 @@ $A=π/4×(D_o^2-D_i^2 )$
 
 - Axial Stiffness($k_a$):  Axial stiffness is being calculated using Area of cross-section of pipes ($A$), Young’s Modulus of Elasticity ($E$) and length of Drill-string ($L$), respectively as,
 
-$k_a=((A×E))/L$
+$k_a=\frac{(A×E)}{L}$
 
 - Torsional Stiffness($k_t$):  Torsional stiffness is being calculated using Polar Moment of Inertia ($A$), Shear Modulus ($G$) and length of Drill-string ($L$), respectively as,
 
-$k_t=((G×J))/L$
+$k_t=\frac{(G×J)}{L}$
 Where,
 $J=  π/32×(D_o^4-D_i^4 )$
 
