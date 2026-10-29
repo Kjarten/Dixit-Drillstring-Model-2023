@@ -221,15 +221,15 @@ Table 3: Bit Reaction Force and Torque components variation with sliding velocit
 Under Steady-State conditions, we get,
 
 - $c_{t-borehole}=7500-20000$
-- $c_{a-borehole}=c_{t-borehole}×(\frac{ROP_{ss}}{((RPM_{SS} )×(π×D_{Tool-joint} ) )})$
+- $c_{a-borehole}=c_{t-borehole}×(\frac{ROP_{ss}}{(RPM_{SS})×(π×D_{Tool-joint})})$
 
 
-Note:  
-	Units of c_(t-borehole), c_(a-borehole) and c_(borehole-resultant) in  ‘N-sec/m’
+	Note:  
+		- Units of $c_{t-borehole}$, $c_{a-borehole} and c_{borehole-resultant} in  ‘N-sec/m’
+        - Drilling simulator accounts for the well path trajectory and variation of TQ along the string length to include the distribution of dynamics along the string.
+        - Values of Viscous dampers are held constants during simulation but the Viscous frictional force will vary depending on the axial and tangential sliding velocities
 
-	Drilling simulator accounts for the well path trajectory and variation of TQ along the string length to include the distribution of dynamics along the string.
-	Values of Viscous dampers are held constants during simulation but the Viscous frictional force will vary depending on the axial and tangential sliding velocities
-GOVERNING EQUATIONS:
+**GOVERNING EQUATIONS:**
 mZ ̈+k_a (Z-Z_o )+F_(Friction (Coulomb+Viscous))+F_Formation Reaction=0
 Jθ ̈+k_t (θ-θ_o )+〖TQ〗_(Friction (Coulomb+Viscous))+〖TQ〗_Formation Reaction=0   
 
