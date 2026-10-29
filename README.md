@@ -28,7 +28,7 @@ Rajat Dixit
 
 
 
-Contents
+## Contents
 
 - Preface	1
 - Part-I: Theory and Background	3
@@ -442,7 +442,7 @@ Case 2: Axial Stiction along the length of drill-string in the absence of Topdri
  
 Figure 10: Variation of Axial velocity of different elements while tripping in hole in the absence of drum RPM
 Figure 10, shows the variation of axial velocity at different drill-string elements including drill-bit while tripping in hole, in the absence of drum RPM. The axial stick and slip phases confirms that the axial drag will be pre-dominant in the absence of rotary speed. String elements have to undergo higher loads to break the static friction and transfer energy to the element below. This phenomenon was not present in previous case, as rotary speed helps to counter the axial drag during tripping and drilling phases and provide ease for element motion along the well-path. This stick effect will be severe in deviated wells in comparison to vertical wells.
-Mud Motor Integrated Drilling Simulator: Methodology
+### Mud Motor Integrated Drilling Simulator: Methodology
 
 Formulation of coupled Axial-torsional drilling simulator lumped parameter model has been documented in earlier section.  This section accounts for the integration of downhole motor into existing drilling simulator model.
 Integrated Downhole Motor (PDM):
@@ -525,7 +525,7 @@ Q_(Mud-pumps)=f(time)
 
 
 
-Special Cases: Mud-motor Integrated Drilling Simulator
+### Special Cases: Mud-motor Integrated Drilling Simulator
 
 Well: Precision 580 Corral Canyon 9-4 FED 122H 7.875” hole-section
 Max Well Inclination: 〖90.3〗^0
@@ -650,8 +650,8 @@ Note:
 
 
 
-Part-III: Drilling Simulator Features  
-Drilling Simulator: Developed Features
+## Part-III: Drilling Simulator Features  
+### Drilling Simulator: Developed Features
 
 Formulation of Coupled Axial-torsional Multi Elements Drill-string dynamics lumped parameter model has been documented. To assess the consistency of results across various Friction Models in future and also during modifications in existing model strategy, different sensitivity cases are tested and documented to account for numerical stability. These cases are of significant value to test the robustness of model under different Topdrive and Downhole conditions. 
 They are categorized as follows:
