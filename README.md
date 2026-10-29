@@ -66,6 +66,7 @@ The cutting components will have direct dependency on the depth of cut whereas t
 ### Drilling Simulator: Methodology
 
 Current Drilling simulator is a coupled 2-DOF Axial-torsional system to model the transient dynamics of drill-string under different operating conditions of drilling and tripping. Modeling is carried out as a Lumped-parameter study. Figure 2 and 3 highlights the Model Schematics along the axial and rotary directions. The drill-string is segregated into multiple elements comprising of drill-pipes, HWDP and collar elements. 
+
 The bit rock interaction is governed by a depth of cut based model. Stribeck friction is utilized to account for the Coulomb friction, whereas, borehole friction is accounted using Viscous frictional force. The net frictional force have dependency on the gravity force, drilling mud and well inclination. Reaction forces due to bit-rock interaction will be present for the duration bit is on bottom. Following geometrical based parameters of drill-string elements are required as model input for both single and multi-elements drill-string system:
 - Element mass 
 - Mass Moment of Inertia
@@ -74,7 +75,7 @@ The bit rock interaction is governed by a depth of cut based model. Stribeck fri
 - Torsional Stiffness
 
 Model Axial and Rotary Schematics:
- 
+
 Figure 2: Drilling Simulator Axial Motion Schematic
  
 Figure 3: Drilling Simulator Rotary Motion Schematic
