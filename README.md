@@ -300,25 +300,35 @@ Coupled Axial-torsional second order differential equation sets, are solved usin
 - $\frac{d\omega}{dt}=-(\frac{1}{J})×(Net External Torque)$
   
 **Initial Conditions for first iteration:** 
-Four outputs that we are getting from the equations are displacement ($Z$), axial velocity ($\dot{Z}), rotation angle ($\Psi$) and angular velocity ($\omega$) for each elements. Following initial conditions are implemented for solving the above set of equations for first iteration.
-	t  = 0
-	Z  = 0
-	Z ̇ = 0 
-	Θ = 0
-	ω = 0
-	〖DOC〗_initial = 0
+Four outputs that we are getting from the equations are displacement ($Z$), axial velocity ($\dot{Z}$), rotation angle ($\Theta$) and angular velocity ($\omega$) for each elements. Following initial conditions are implemented for solving the above set of equations for first iteration.
+- $t = 0$
+- $Z  = 0$
+- $\dot{Z} = 0$ 
+- $\Theta = 0$
+- $\omega = 0$
+- $DOC_{initial} = 0$
 
-Downhole bit parameters
+**Downhole bit parameters**
                         
-	Downhole Bit WOB: 
+- Downhole Bit WOB: 
 
-WOB_bit= (k_WOB×〖DOC〗_(iteration ) )+(c_(bit-axial)×Z ̇_(bit-iteration) )
+$$
+WOB_{bit}= (k_{WOB}×DOC_{iteration})+(c_{bit-axial}×\dot{Z}_{bit-iteration})
+$$
 
-	Downhole Bit Torque: 
+- Downhole Bit Torque: 
+$$
+TQ_{bit} = (k_{TQ}×DOC_{iteration array})×(±1)
+$$
 
-〖TQ〗_bit= (k_TQ×〖DOC〗_(iteration array) )×(±1)
- 
-Figure 6: Rock surface tracking feature while drilling in current drilling simulator (Bit displacement along downward direction)
+
+Rock_surface_tracking_feature_while_drilling_in_current_drilling_simulator
+
+<div align="center">
+  <img src="https://github.com/Kjarten/Dixit-Drillstring-Model-2023/blob/main/Documentation/Rock_surface_tracking_feature_while_drilling_in_current_drilling_simulator.png?raw=true" alt="Rock surface tracking feature while drilling in current drilling simulator">
+</div>
+<p align="center">Figure 7: Rock surface tracking feature while drilling in current drilling simulator (Bit displacement along downward direction)</p>
+
 ### Friction Model
 
 Modeling friction forces along the length of drill-string is challenging due to the non-linear behavior of system with ever changing velocity direction. Net frictional force is a strong function of the sliding velocity. The axial component of the frictional force contributes to the drag force whereas, the tangential component of the frictional force generates a frictional torque in the system.
