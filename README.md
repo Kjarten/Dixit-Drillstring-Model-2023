@@ -256,6 +256,7 @@ In Vector form above equations takes the form:
 $$
 \{M\}\ddot{Z}+\{C_a\}\dot{Z}+\{K_a\}Z+f_{fric}=F_{forcing}
 $$
+
 Where,
 
 	Z_o= ∫▒〖V_0 dt〗
