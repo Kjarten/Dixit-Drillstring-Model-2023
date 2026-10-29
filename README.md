@@ -139,7 +139,7 @@ Steady-State Parameters for 2000 Psi CCS Value:
 - $WOB_{SS} = 1500 lbs$
 - $ROP_{SS} = 27 m/hr$
 - $RPM_{SS} = 120 rpm$
-- $DOC_{SS} =  ROP_{ss}/RPM_{ss}  = 0.147 inch/rev$
+- $DOC_{SS} =  \frac{ROP_{ss}}{RPM_{ss}}  = 0.147 inch/rev$
 
 Note: Values of $RPM_{SS}$, $ROP_{SS}$ and $DOC_{SS}$ are held the same for all simulation runs to have uniformity and robustness in model for different sensitivity cases. Initial model tuning parameters is taken to be conservative to setup the problem in simulator.
 
