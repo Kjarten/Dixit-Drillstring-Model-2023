@@ -463,9 +463,9 @@ $$
 Note: 
 
 - Units of $c_{t-borehole}$ and $c_{a-borehole}$ in ‘N-sec/m’
-- The order of viscous damping constants ($c_{t-borehole}$ and $c_{a-borehole}) which acts as a model-tuning parameters, is kept consistent to keep the system in ideal damp state depending on the field data.
+- The order of viscous damping constants ($c_{t-borehole}$ and $c_{a-borehole}$) which acts as a model-tuning parameters, is kept consistent to keep the system in ideal damp state depending on the field data.
 - To account for the borehole dampers distribution in case of multi-element string, we consider to take the damper values for elements in fraction of their mass contributing, i.e., 50% for Collars, 30% for HWDP and 20% for the drill-pipes. This can be further optimized to be more realistic in alignment with field data.
-- Numerical Data presented in the document has been taken from Eric Cayeux’s work: SPE- 199678-MS, “Analysis of Torsional Stick-slip Situations Observed with Downhole High Frequency Magnetometer Data”
+- Numerical Data presented in the document has been taken from Eric Cayeux’s work: [SPE-199678-MS, “Analysis of Torsional Stick-slip Situations Observed with Downhole High Frequency Magnetometer Data”](https://onepetro.org/SPEDC/proceedings-abstract/20DC/20DC/D081S004R003/446785?redirectedFrom=PDF)
 
 ### Special Cases: Drilling Simulator in the Absence of Mud-motor
 
