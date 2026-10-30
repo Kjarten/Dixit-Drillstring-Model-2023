@@ -505,40 +505,80 @@ Figure 11, shows the variation of axial velocity at different drill-string eleme
 ### Mud Motor Integrated Drilling Simulator: Methodology
 
 Formulation of coupled Axial-torsional drilling simulator lumped parameter model has been documented in earlier section.  This section accounts for the integration of downhole motor into existing drilling simulator model.
-Integrated Downhole Motor (PDM):
+
+**Integrated Downhole Motor (PDM):**
 PDM has been extensively used in the drilling operation. The performance of the PDM can be described by pressure drop versus torque and RPM. Depending on the type of motor, the performance curves for RPM and flow rate will be different. PDM is a hydraulically driven equipment, the performance of which depends on the cross-sectional flow area between rotor and stator, rotor-stator lobe ratio, stage length, number of stages and flow rate.
+
 The performance parameters of PDM includes output Torque, RPM, pressure drop and mechanical power. For a given type of PDM, the RPM is proportional to the flow rate pumped through the PDM whereas, the pressure drop across the motor is proportional to the Torque output.
-〖Mechanical Power〗_Motor=Torque×RPM
-〖Hydraulic Power〗_Motor=∆P×FlowRate
+
+$$
+Mechanical Power_{Motor}=Torque \times RPM
+$$
+
+$$
+Hydraulic Power_{Motor}=\Delta P \times FlowRate
+$$
+
 An advantage of PDMs is that output performance (T, N) can be monitored from the rig floor by tracking standpipe pressure and flow rate. The difference between off-bottom and on-bottom standpipe pressures represents pressure drop across the motor during drilling for a given weight on bit (WOB). Flow rate through the drilling system can be translated into output rotary speed. Most PDMs feature a bend sub that serves the purpose of directional drilling. With a bend hole (usually less than 4^0), a PDM is capable of drilling to the direction that the bit is pointed to.
+
 Driven by mud flow, the power section at the top of the PDM can generate Torque and RPM on the lower end and drive the drill bit. In motor operation, there are two operation modes: Rotary and Sliding.
- 
-Figure 11: Mud Motor Steerable Assembly (Ref: Zoucheng Dongyuang Petroleum Co. Ltd.)
-Rotary Mode: In rotary mode, the drill-string is rotated by the Topdrive, and the bend sub rotates with the upper part of the drill string. Under rotary mode, the motor is not able to steer as the bend angle is constantly changing. The bit rpm is equal to the surface rpm plus the motor rpm. 
- 
-Figure 12: Slide Vs Rotate (Ref: Warren, 2019. Technology gains momentum: Rotary-steerable technology Part 1.)
-Sliding Mode: In Sliding mode, there is no surface rpm, and the bend sub tool-face is set up pointing towards the desired direction. The rotary speed provided by the motor power section drives the bit to drill towards the direction determined by the bend. (Ref: IADC/SPE-180591-MS)
+
+<div align="center">
+  <img src="https://github.com/Kjarten/Dixit-Drillstring-Model-2023/blob/main/Documentation/Mud_Motor_Steerable_Assembly.png?raw=true" alt="Mud Motor Steerable Assembly">
+</div>
+<p align="center">Figure 12: Mud Motor Steerable Assembly (Ref: Zoucheng Dongyuang Petroleum Co. Ltd.)</p>
+
+**Rotary Mode:** In rotary mode, the drill-string is rotated by the Topdrive, and the bend sub rotates with the upper part of the drill string. Under rotary mode, the motor is not able to steer as the bend angle is constantly changing. The bit rpm is equal to the surface rpm plus the motor rpm. 
+
+<div align="center">
+  <img src="https://github.com/Kjarten/Dixit-Drillstring-Model-2023/blob/main/Documentation/Slide_Vs_Rotate.jpg?raw=true" alt="Slide Vs Rotate">
+</div>
+<p align="center">Figure 13: Slide Vs Rotate (Ref: Warren, 2019. Technology gains momentum: Rotary-steerable technology Part 1.)</p>
+
+**Sliding Mode:** In Sliding mode, there is no surface rpm, and the bend sub tool-face is set up pointing towards the desired direction. The rotary speed provided by the motor power section drives the bit to drill towards the direction determined by the bend. (Ref: IADC/SPE-180591-MS)
+
 The bit sits on a bent housing, and therefore does not point straight ahead. This causes a side force, which allows the bit to drill a curved hole. The near bit stabilizer is smaller than the bit itself, this stabilizer forms a fulcrum, within which the motor acts as a lever, so that side force may be generated at the site of the bit.
-Dump or Bypass Valve: The by-pass valve, or dump valve, is used to allow drilling fluid to fill the drill-string from the annulus when it is tripping into the wellbore, or to drain it when it is tripping out. Thanks to this valve, the bottom of the wellbore maintains a constant pressure, which helps to prevent control problems during trips.
+
+**Dump or Bypass Valve:** The by-pass valve, or dump valve, is used to allow drilling fluid to fill the drill-string from the annulus when it is tripping into the wellbore, or to drain it when it is tripping out. Thanks to this valve, the bottom of the wellbore maintains a constant pressure, which helps to prevent control problems during trips.
+
 In the power section of PDM, the spiral shaped rotor produces rotation when the drilling fluid force acts upon it. Should the bit/formation resistance to rotation (known as the drilling torque requirement) be too great, then the drilling fluid can potentially cause the elastomeric material of the stator to become deformed temporarily. The division or seal between high and low pressure is then lost, which causes the motor to stall. 
+
 As the pressure inside each cavity decreases from leakage of fluid volume past the lost seal, there will be a significant pressure increase at the surface. This means that the motor needs to be lifted off the bottom, and then restarted. Should the stall not be properly corrected, the stator will be permanently damaged, and the life of the overall motor reduced. This is especially important when working with higher flow rates or high differential pressures. Less applied differential pressure will mean fewer stalls.
 
 Note: One stage is defined as one complete helical rotation, or pitch of the stator/housing. As the number of stages increases, the differential pressure and the torque also increases. Additionally, as the lobe count increases, the final drive speed decreases accordingly.
+
 We are not accounting for the Surface SPP variation in the model for now. May be at a later stage. In the model, differential pressure across motor will be accounted as the SPP at motor. 
 
-
 Note: To account for the total SPP at surface, following two conditions needs to be added to model as per requirement at a later stage:
-	Fluid Compressibility
-	Total Surface SPP = 〖SPP〗_(Off-bottom)+ 〖SPP〗_Motor
-Where, 〖SPP〗_Motor is the differential pressure across motor that will be dependent on the formation reaction torque and WOB, DOC, ROP, formation CCS among few parameters.
-〖SPP〗_(Off-bottom) is the differential pressure calculation during tripping mode and can be related by squared low of flow across pipe in Laminar flow,
-SPP∝(〖Flow Rate〗^2 )
+- Fluid Compressibility
+- $Total Surface SPP = SPP_{Off-bottom}+ SPP_{Motor}$
+
+Where, $SPP_{Motor}$ is the differential pressure across motor that will be dependent on the formation reaction torque and WOB, DOC, ROP, formation CCS among few parameters.
+
+$SPP_{Off-bottom}$ is the differential pressure calculation during tripping mode and can be related by squared low of flow across pipe in Laminar flow,
+
+$$
+SPP∝(Flow Rate^2)
+$$
+
 Also, Bit RPM will be an output based on the TQ and RPM of the motor + stator (housing)
- Equations Governing Motor Dynamics: Following parameters are to be utilized while integrating PDM (Mud Motor) functionality in the existing model.
-	Bit RPM: Bit RPM comprises of the Rotor(Mud Motor) RPM and Stator (Housing) RPM
-〖RPM〗_Bit=〖RPM〗_Rotor+〖RPM〗_Stator
-〖RPM〗_Rotor=C_1×FlowRate×[1+(C_2×(〖TQ〗_Bit+〖TQ〗_(Lower BHA) )  )+(C_3×〖(〖TQ〗_Bit+〖TQ〗_(Lower BHA))〗^2  )  ]
-〖∆P〗_Output=C_4×(〖TQ〗_Bit+〖TQ〗_(Lower BHA) )
+
+**Equations Governing Motor Dynamics:** Following parameters are to be utilized while integrating PDM (Mud Motor) functionality in the existing model.
+
+- **Bit RPM:** Bit RPM comprises of the Rotor(Mud Motor) RPM and Stator (Housing) RPM
+
+$$
+RPM_{Bit}=RPM_{Rotor}+RPM_{Stator}
+$$
+
+$$
+RPM_{Rotor}=C_1 \times FlowRate \times [1+(C_2×(TQ_{Bit}+TQ_{Lower BHA}))+(C_3×(TQ_{Bit}+TQ_{Lower BHA})^2)]
+$$
+
+$$
+\Delta P_Output=C_4 \times (TQ_{Bit}+TQ_{Lower BHA})
+$$
+
 Note: C_2 and C_3 values are negative to account for the RPM decay as reaction torque increases. In case where the PDM position is not at the bit but somewhere in the middle,  〖TQ〗_(Lower BHA) comprises of all the elements below the PDM else where the PDM position is right above the bit then 〖TQ〗_(Lower BHA) value will be zero. Currently, all model validation is performed for the cases where PDM is right above bit.
 
 Model Parameters Calculations: 
