@@ -579,13 +579,13 @@ $$
 \Delta P_Output=C_4 \times (TQ_{Bit}+TQ_{Lower BHA})
 $$
 
-Note: C_2 and C_3 values are negative to account for the RPM decay as reaction torque increases. In case where the PDM position is not at the bit but somewhere in the middle,  〖TQ〗_(Lower BHA) comprises of all the elements below the PDM else where the PDM position is right above the bit then 〖TQ〗_(Lower BHA) value will be zero. Currently, all model validation is performed for the cases where PDM is right above bit.
+Note: $C_2$ and $C_3$ values are negative to account for the RPM decay as reaction torque increases. In case where the PDM position is not at the bit but somewhere in the middle,  $TQ_{Lower BHA} comprises of all the elements below the PDM else where the PDM position is right above the bit then $TQ_{Lower BHA}$ value will be zero. Currently, all model validation is performed for the cases where PDM is right above bit.
 
-Model Parameters Calculations: 
-	C_1=Rev/gallon (RPG)
-	C_4=(Max.Operating ∆P(Stall Pressure))/(TQ at Max.Operating ∆P (Stall TQ))  
+**Model Parameters Calculations:**
+- $C_1=\frac{Rev}{gallon} (RPG)$
+- $C_4=\frac{Max.Operating \DeltaP(Stall Pressure)}{(TQ at Max.Operating \Delta P (Stall TQ)}  
 
-Note: Values of constants C_2 and C_3 accounts for the motor by-pass valve effect.
+Note: Values of constants $C_2$ and $C_3$ accounts for the motor by-pass valve effect.
  
 
 Figure 13: Mud motor Integrated Drilling simulator Schematic
