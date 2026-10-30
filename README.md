@@ -608,7 +608,7 @@ Note: Values of constants $C_2$ and $C_3$ accounts for the motor by-pass valve e
 - Max. Operating Diff. Pressure: 1130 Psi
 - Torque at Max Operating Diff. Pressure: 10460 (lbs-ft.) 
 - Bit to Bend: 4.05 ft.
-- RPG: 0.28 ($\frac{Revs}{Gallon})
+- RPG: 0.28 ($\frac{Revs}{Gallon}$)
 - Mud flow rate does not account for the pressure pulse in the system, the energy transfer delay from mud-pumps to mud-motor downhole is accounted by various ramp function inputs, i.e.,
 
 $$
@@ -623,11 +623,19 @@ $$
 - Drill-bit Blades: 3 (All symmetrically placed with 120 deg. apart)
 - Formation CCS: 2 ksi 
 - Drill-string Elements: 12 (10 DP + 1 (PDM Stator) + 1 (PDM Rotor/Bit)
- 
-Figure 15: Well-path for Precision 580 Corral Canyon 9-4 FED 122H Wellbore for 7.875” hole-section
+
+<div align="center">
+  <img src="https://github.com/Kjarten/Dixit-Drillstring-Model-2023/blob/main/Documentation/Well-path_for_Precision_580_Corral_Canyon_9-4.png?raw=true" alt="Well-path for Precision 580 Corral Canyon 9-4 FED 122H Wellbore for 7.875” hole-section">
+</div>
+<p align="center">Figure 16: Well-path for Precision 580 Corral Canyon 9-4 FED 122H Wellbore for 7.875” hole-section</p>
+
 **Case 1: Pumps Off, Topdrive Rotary and Axial Motion on with ROP in Control Mode**
- 
-Figure 16: Comparison of RPM at Topdrive, drill-bit, mud-motor rotor and Stator Housing
+
+<div align="center">
+  <img src="https://github.com/Kjarten/Dixit-Drillstring-Model-2023/blob/main/Documentation/Comparison_of_RPM_at_Topdrive_drill-bit_mud-motor_rotor_and_Stator_Housing.png?raw=true" alt="Comparison of RPM at Topdrive, drill-bit, mud-motor rotor and Stator Housing">
+</div>
+<p align="center">Figure 17: Comparison of RPM at Topdrive, drill-bit, mud-motor rotor and Stator Housing” hole-section</p>
+
 Mud-pumps are off for the above mentioned Case 1. Rotate Mode Drilling, all attached charts in the first row governs the Topdrive parameters variation and the second row governs the dynamics of Bit/Rotor parameters assuming rotor is overlapped with bit and transfer its dynamics to bit directly
  
 Figure 17: Surface and Downhole Parameters
