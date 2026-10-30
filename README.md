@@ -796,7 +796,7 @@ The current drilling simulator is robust to perform the basic drilling and tripp
 	- Working along with Schlumberger for they use iDrill to model their Omron and Cameron autodrillers with DrillOps 
 	- Need to integrate SoftSpeed, SoftTorque, Z-Torque control models and tuning for these cases is required (University of Calgary has this modeled)
 
--Top drive constraint is constant RPM
+- Top drive constraint is constant RPM
 	- Need to model topdrive stalling and interaction with auto driller torque limits
 	- Currently, we have guidance based on limited field operations (Qatar, Hebron and land rigs), need to improve this capability inclusion
 	- Need to integrate SoftSpeed, SoftTorque, Z-Torque control models and tuning for these cases is required (University of Calgary has this modeled)
