@@ -576,7 +576,7 @@ RPM_{Rotor}=C_1 \times FlowRate \times [1+(C_2×(TQ_{Bit}+TQ_{Lower BHA}))+(C_3�
 $$
 
 $$
-\Delta P_Output=C_4 \times (TQ_{Bit}+TQ_{Lower BHA})
+\Delta P_{Output}=C_4 \times (TQ_{Bit}+TQ_{Lower BHA})
 $$
 
 Note: $C_2$ and $C_3$ values are negative to account for the RPM decay as reaction torque increases. In case where the PDM position is not at the bit but somewhere in the middle,  $TQ_{Lower BHA} comprises of all the elements below the PDM else where the PDM position is right above the bit then $TQ_{Lower BHA}$ value will be zero. Currently, all model validation is performed for the cases where PDM is right above bit.
@@ -586,27 +586,34 @@ Note: $C_2$ and $C_3$ values are negative to account for the RPM decay as reacti
 - $C_4=\frac{Max.Operating \DeltaP(Stall Pressure)}{(TQ at Max.Operating \Delta P (Stall TQ)}  
 
 Note: Values of constants $C_2$ and $C_3$ accounts for the motor by-pass valve effect.
- 
 
-Figure 13: Mud motor Integrated Drilling simulator Schematic
+<div align="center">
+  <img src="https://github.com/Kjarten/Dixit-Drillstring-Model-2023/blob/main/Documentation/Mud_motor_Integrated_Drilling_simulator_Schematic.jpg?raw=true" alt="Mud motor Integrated Drilling simulator Schematic">
+</div>
+<p align="center">Figure 14: Mud motor Integrated Drilling simulator Schematic</p>
 
- 
-Figure 14: Mud motor Dynamics
+<div align="center">
+  <img src="https://github.com/Kjarten/Dixit-Drillstring-Model-2023/blob/main/Documentation/Mud_motor_Dynamics.jpg?raw=true" alt="Mud motor Dynamics">
+</div>
+<p align="center">Figure 15: Mud motor Dynamics</p>
 
-Constant Values for Current PDM Case: 6.75” Scout 7/8 5.0 
-	C_1=0.28 rev/gallon
-	C_2=0   (From Performance Chart C_2=-1.65×10^(-3)   RPM/(N-m) )
-	C_3=0   (From Performance Chart C_3=-2.7×10^(-6)   RPM/(N-m)^2  )  
-	C_4=(1130 (Psi))/(10460 (lbs-ft)) or (1130×6894.76 (Pa))/(10460×4.45×12×0.0254 (N-m))=549.150(1/m^3 )
-	No. of Lobes:
-	Rotor: 7,	Stator: 8
-	Flow Range: 300-600 (Gallon/min), 		
-	Max. Operating Diff. Pressure: 1130 Psi
-	Torque at Max Operating Diff. Pressure: 10460 (lbs-ft.) 
-	Bit to Bend: 4.05 ft.
-	RPG: 0.28 (Revs/Gallon)
-	Mud flow rate does not account for the pressure pulse in the system, the energy transfer delay from mud-pumps to mud-motor downhole is accounted by various ramp function inputs, i.e.,
+**Constant Values for Current PDM Case:** 6.75” Scout 7/8 5.0 
+- $C_1$=0.28 rev/gallon
+- $C_2$=0   (From Performance Chart $C_2=-1.65×10^(-3)   RPM/(N-m)$ )
+- C_3=0   (From Performance Chart $C_3=-2.7×10^(-6)   RPM/(N-m)^2$  )  
+- C_4=(1130 (Psi))/(10460 (lbs-ft)) or (1130×6894.76 (Pa))/(10460×4.45×12×0.0254 (N-m))=549.150(1/m^3 )
+- No. of Lobes:
+    - Rotor: 7,	Stator: 8
+- Flow Range: 300-600 (Gallon/min), 		
+- Max. Operating Diff. Pressure: 1130 Psi
+- Torque at Max Operating Diff. Pressure: 10460 (lbs-ft.) 
+- Bit to Bend: 4.05 ft.
+- RPG: 0.28 (Revs/Gallon)
+- Mud flow rate does not account for the pressure pulse in the system, the energy transfer delay from mud-pumps to mud-motor downhole is accounted by various ramp function inputs, i.e.,
+
+$$
 Q_(Mud-pumps)=f(time)
+$$
 
 ### Special Cases: Mud-motor Integrated Drilling Simulator
 
