@@ -617,29 +617,29 @@ $$
 
 ### Special Cases: Mud-motor Integrated Drilling Simulator
 
-Well: Precision 580 Corral Canyon 9-4 FED 122H 7.875” hole-section
-Max Well Inclination: 〖90.3〗^0
-Drill-string Length: 16600 ft.
-Drill-bit Blades: 3 (All symmetrically placed with 120 deg. apart)
-Formation CCS: 2 ksi 
-Drill-string Elements: 12 (10 DP + 1 (PDM Stator) + 1 (PDM Rotor/Bit)
+- Well: Precision 580 Corral Canyon 9-4 FED 122H 7.875” hole-section
+- Max Well Inclination: 〖90.3〗^0
+- Drill-string Length: 16600 ft.
+- Drill-bit Blades: 3 (All symmetrically placed with 120 deg. apart)
+- Formation CCS: 2 ksi 
+- Drill-string Elements: 12 (10 DP + 1 (PDM Stator) + 1 (PDM Rotor/Bit)
  
 Figure 15: Well-path for Precision 580 Corral Canyon 9-4 FED 122H Wellbore for 7.875” hole-section
-Case 1: Pumps Off, Topdrive Rotary and Axial Motion on with ROP in Control Mode 
+**Case 1: Pumps Off, Topdrive Rotary and Axial Motion on with ROP in Control Mode**
  
 Figure 16: Comparison of RPM at Topdrive, drill-bit, mud-motor rotor and Stator Housing
 Mud-pumps are off for the above mentioned Case 1. Rotate Mode Drilling, all attached charts in the first row governs the Topdrive parameters variation and the second row governs the dynamics of Bit/Rotor parameters assuming rotor is overlapped with bit and transfer its dynamics to bit directly
  
 Figure 17: Surface and Downhole Parameters
 ROP Control Mode for drilling is preferred here. WOB will adjust at Topdrive in accord with ROP.  Diff. pressure across motor will be accounted only when Pumps are on.
-Case 2: Pumps On, Topdrive Rotary and Axial Motion on with ROP in Control Mode
+**Case 2: Pumps On, Topdrive Rotary and Axial Motion on with ROP in Control Mode**
 Mud-pumps flow starts at t = 0 sec with 320 GPM Flow-rate and takes 10 seconds to reach full value, corresponding pumps RPM for 320 GPM flow-rate equals to 89.6.
 
  
 Figure 18: Comparison of RPM at Topdrive, drill bit, Rotor and housing of Mud-motor
  
 Figure 19: Surface and Downhole Parameters
-Case 3: Slide + Rotate Mode, ROP in Control Mode, Pumps On
+**Case 3: Slide + Rotate Mode, ROP in Control Mode, Pumps On**
 Slide Mode: From t = 0 sec to t = 350 sec, Pumps On, Topdrive Axial Motion On, Topdrive Rotary Off
 Rotate Mode: From t = 350 sec onwards, with Topdrive RPM = 10, to counter the axial drag along the drill-string
  
@@ -656,7 +656,7 @@ The above chart shows the Torque variation at different Drill-string elements in
 In Rotate mode, the peak highlights the sudden release of the negative stored torque and finally post transition, the torque starts to stabilize to expected values. The figure below shows the total rotation angle for Topdrive, Stator and Rotor/Bit elements.
  
 Figure 23: Comparison of twist effects of rotary angle at stator housing of mud motor
-Case 4: Rotate Mode, Pumps On, ROP Topdrive in Control Mode, Topdrive Rotary Step Function
+**Case 4: Rotate Mode, Pumps On, ROP Topdrive in Control Mode, Topdrive Rotary Step Function**
  
 Figure 24: Effect of different topdrive RPM of drum on Surface and Downhole parameters
 In Figure 24, downhole parameters including the differential pressure at motor will change as the topdrive RPM of drum changes, this is primarily due to change in the DOC and reaction torque and WOB at bit which transfers the effects to the motor and vary its differential pressure.
@@ -668,7 +668,7 @@ Figure 26: Variation of Topdrive, motor input RPM and Total RPM at bit during dr
  
 Figure 27: Variation of Downhole parameters at bit and mud-motor differential pressure
 
-Case 5: Rotate Mode, Pumps On/different Flow-rates, ROP in Control M., Topdrive Rotary Same
+**Case 5: Rotate Mode, Pumps On/different Flow-rates, ROP in Control M., Topdrive Rotary Same**
 Pumps are on with different Flow-rates as input to Rotor element of Drill-string. The Topdrive Rotary is kept constant at 50 rpm and ROP Topdrive is set at 40 m/hr. with ROP Control Mode for drilling.
  
 Figure 28: Variation of Topdrive and downhole parameters at different flow rates of mud-pumps
@@ -683,7 +683,8 @@ Figure 30: Variation of different downhole parameters at bit and mud-motor Vs Ti
  
 Figure 31: Variation of Topdrive and Bit Axial velocity vs Time
 From the above charts, it is evident that the differential pressure across the motor is strongly dependent on the Topdrive parameters including RPM, Axial velocity, Pump Flow rates. Additionally, while on-bottom drilling, differential pressure across motor is dependent on the formation CCS, Depth of Cut of bit among other parameters.
-Case 6: Pipe Rocking During Slide Mode, Pumps On, Topdrive ROP in Control Mode
+
+**Case 6: Pipe Rocking During Slide Mode, Pumps On, Topdrive ROP in Control Mode**
 Static friction is an important performance limiter when slide drilling with a downhole motor. Pipe rocking can be used as a low-cost technique to break the static friction in a section of the well and thereby reduce its negative effect. Pipe rocking simulation was used to find the rocking regime that maximizes the section of the string under conditions of dynamic friction, without losing tool-face control. 
 When drilling directionally with a downhole motor, the drill pipe slides against the wellbore and encounters friction. This friction impairs force transfer to the bit, which reduces the rate of penetration (ROP) and also makes it difficult to achieve a desired drilling direction.  Additionally, poor tool-face control can translate into an increase in wellbore tortuosity, which in turn results in less efficient wellbore cleaning, increase in drag and a potential decrease in production rates in the future. Finally, poor hole cleaning and tortuosity may create restrictions whereby elastic energy gets stored in several sections of the drill-string, producing poor weight transfer and a risk of releasing bursts of energy against the formation. This can potentially damage bit and/or stall the motor. (Ref: URTEC-2019-1115-MS) 
  
@@ -705,7 +706,8 @@ Figure 36: Variation of Torque at Topdrive and along different elements of drill
 The chart below highlights the total rotation angle for Topdrive and Stator element of the drill-string. As the Rotate mode is activated at topdrive, the counter twist stored in stator housing will gradually starts to release the trapped torque and approaches the 0 value before starts to increase in the positive Y direction down the path.
  
 Figure 37: Variation of total Twist at Topdrive and Stator housing of mud-motor (Exploded View)
-Case 7: Hard to soft rock transition during Slide Mode, Pumps On, Topdrive ROP in Control Mode
+
+**Case 7: Hard to soft rock transition during Slide Mode, Pumps On, Topdrive ROP in Control Mode**
 Well: Poker Lake Unit 30 BS 101H 9.875” hole-section
 Max Well Inclination: 5^0
 Drill-string Length: 1040 m.
