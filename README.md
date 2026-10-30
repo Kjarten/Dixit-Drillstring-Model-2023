@@ -632,7 +632,7 @@ $$
 **Case 1: Pumps Off, Topdrive Rotary and Axial Motion on with ROP in Control Mode**
 
 <div align="center">
-  <img src="https://github.com/Kjarten/Dixit-Drillstring-Model-2023/blob/main/Documentation/Comparison_of_RPM_at_Topdrive_drill-bit_mud-motor_rotor_and_Stator_Housing.png?raw=true" alt="Comparison of RPM at Topdrive, drill-bit, mud-motor rotor and Stator Housing">
+  <img src="https://github.com/Kjarten/Dixit-Drillstring-Model-2023/blob/main/Documentation/Comparison_of_RPM_at_Topdrive_drill-bit_mud-motor_rotor_and_Stator_Housing.jpg?raw=true" alt="Comparison of RPM at Topdrive, drill-bit, mud-motor rotor and Stator Housing">
 </div>
 <p align="center">Figure 17: Comparison of RPM at Topdrive, drill-bit, mud-motor rotor and Stator Housing” hole-section</p>
 
