@@ -435,6 +435,7 @@ Viscous Force_{Axial}=f(V_{Axial},V_{Mud})
 $$
 
 i.e.
+
 $$
 Viscous Force_{Axial-pipe}=ca_{borehole-viscous}×V_{Axial}×(\frac{D_{pipe}^2 }{D_{hole}^2 -D_{pipe}^2 })
 $$
