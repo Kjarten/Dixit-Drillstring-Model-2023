@@ -762,51 +762,54 @@ They are categorized as follows:
 - Motor Back-off Event testing capability in Slide Mode (with drilling depths having different Rock-strength)
 - Low Friction Stabilizer and Lubrication trials testing capability
 
-Number of Drill-string Elements: Segregate number of string elements as per the model flexibility and well path
-ROP Topdrive Input Function: Ramp Up/down 
-RPM Topdrive Input Function: Heaviside, Ramp Up/down
-CCS of Formation: 2000 – 60000 Psi. Feeding the dependency of CCS on MD as model input 
-Bit-size: 6”, 8.5”, 12.25”, 17.5” etc.
-Number of Bit-blades: 3, 5, 7 and 9
-Drill-pipe Size: 4”, 5”, 5.5” and 6.625” etc.
-Tripping In/Out of hole: Code updated to account for tripping phenomena alongside drilling in model. 
-Independent Rotary Motion: Topdrive Rotary motion is allowed with axial motion restricted.
-Independent Axial Motion: Topdrive Axial motion is allowed with rotary motion restricted to account for significant string compression.
-Pipe OD/ID: Accounted for different size (OD/ID) of Drill-string elements. Parameter dependency on Mass Moment of Inertia, area of cross-section, Polar Moment of Inertia.
-Pipe Axial/Torsional Stiffness: Parameter dependency on pipe OD/ID and Length of string elements
-Noise effect while Drilling: Incorporated noise in cutting mechanism by modifying CCS of formation to have realistic results with minimal vibration induced motion.
-Stribeck Friction: Incorporated Stribeck Coulomb friction into model to account for swift transition between static to dynamic regimes for different drill-string Elements.
-Wellbore Inclination: Added wellbore inclination into model to account for various well-paths for different wellbores and see the dynamics along the well trajectory.
-Mud Velocity Effect: Added mud flow based viscous drag along the borehole to account for net frictional force comprises of Coulomb and Viscous forces and Torque coupled.
-Mud-pumps Flow Rate: Incorporated mud-pumps flow rate into model to account for the RPM input to the Mud motor’s rotor element which feeds additional rpm to the drill bit in rotate mode. Fluid Compressibility is not included into model yet, part of future integration.
-Mud Motor/Downhole Motor Integration: Accounted for downhole mud motor in drill-string to counter both Slide and Rotate mode of drilling using downhole motor.
-Pipe Rocking Phenomenon in Slide mode: Added pipe-rocking phenomenon in model in Slide mode of drilling with downhole motor by providing to and fro motion to Topdrive rotary and break the additional drag along the axial direction of drillstring elements by keeping the tool-face intact
-Motor back-off Events Testing: Drilling simulator possesses capability to test various cases of motor stall events.
-Low Friction Stabilizers and Lubrication Trials: Lubrication trials and low friction stabilizers in BHA dynamics can be modeled using drilling simulator.
-Drilling Simulator: Under Development Features
+
+- **Number of Drill-string Elements:** Segregate number of string elements as per the model flexibility and well path
+- **ROP Topdrive Input Function:** Ramp Up/down 
+- **RPM Topdrive Input Function:** Heaviside, Ramp Up/down
+- **CCS of Formation:** 2000 – 60000 Psi. Feeding the dependency of CCS on MD as model input 
+- **Bit-size:** 6”, 8.5”, 12.25”, 17.5” etc.
+- **Number of Bit-blades:** 3, 5, 7 and 9
+- **Drill-pipe Size:** 4”, 5”, 5.5” and 6.625” etc.
+- **Tripping In/Out of hole:** Code updated to account for tripping phenomena alongside drilling in model. 
+- **Independent Rotary Motion:** Topdrive Rotary motion is allowed with axial motion restricted.
+- **Independent Axial Motion:** Topdrive Axial motion is allowed with rotary motion restricted to account for significant string compression.
+- **Pipe OD/ID:** Accounted for different size (OD/ID) of Drill-string elements. Parameter dependency on Mass Moment of Inertia, area of cross-section, Polar Moment of Inertia.
+- **Pipe Axial/Torsional Stiffness:** Parameter dependency on pipe OD/ID and Length of string elements
+- **Noise effect while Drilling:** Incorporated noise in cutting mechanism by modifying CCS of formation to have realistic results with minimal vibration induced motion.
+- **Stribeck Friction:** Incorporated Stribeck Coulomb friction into model to account for swift transition between static to dynamic regimes for different drill-string Elements.
+- **Wellbore Inclination:** Added wellbore inclination into model to account for various well-paths for different wellbores and see the dynamics along the well trajectory.
+- **Mud Velocity Effect:** Added mud flow based viscous drag along the borehole to account for net frictional force comprises of Coulomb and Viscous forces and Torque coupled.
+- **Mud-pumps Flow Rate:** Incorporated mud-pumps flow rate into model to account for the RPM input to the Mud motor’s rotor element which feeds additional rpm to the drill bit in rotate mode. Fluid Compressibility is not included into model yet, part of future integration.
+- **Mud Motor/Downhole Motor Integration:** Accounted for downhole mud motor in drill-string to counter both Slide and Rotate mode of drilling using downhole motor.
+- **Pipe Rocking Phenomenon in Slide mode:** Added pipe-rocking phenomenon in model in Slide mode of drilling with downhole motor by providing to and fro motion to Topdrive rotary and break the additional drag along the axial direction of drillstring elements by keeping the tool-face intact
+- **Motor back-off Events Testing:** Drilling simulator possesses capability to test various cases of motor stall events.
+- **Low Friction Stabilizers and Lubrication Trials:** Lubrication trials and low friction stabilizers in BHA dynamics can be modeled using drilling simulator.
+
+### Drilling Simulator: Under Development Features
 
 The current drilling simulator is robust to perform the basic drilling and tripping operations modeling in the presence/absence of downhole mud motor. Following key features development is under progress currently, to ramp up the usability of the tool for industry wide applications:
-	Currently working to improve the computational performance speed and numerical stability of the model to simulate complex field events (e.g. harder rocks, additional motor stall events)
 
-	Draw-works constraint is currently controlled ROP
-	Need to upgrade to full multi-mode autodriller capability (WOB, ROP, Torque, Diff. Pressure with adjustable gain parameters)
-	Working along with Schlumberger for they use iDrill to model their Omron and Cameron autodrillers with DrillOps 
-	Need to integrate SoftSpeed, SoftTorque, Z-Torque control models and tuning for these cases is required (University of Calgary has this modeled)
+- Currently working to improve the computational performance speed and numerical stability of the model to simulate complex field events (e.g. harder rocks, additional motor stall events)
 
-	Top drive constraint is constant RPM
-	Need to model topdrive stalling and interaction with auto driller torque limits
-	Currently, we have guidance based on limited field operations (Qatar, Hebron and land rigs), need to improve this capability inclusion
-	Need to integrate SoftSpeed, SoftTorque, Z-Torque control models and tuning for these cases is required (University of Calgary has this modeled)
+- Draw-works constraint is currently controlled ROP
+    - Need to upgrade to full multi-mode autodriller capability (WOB, ROP, Torque, Diff. Pressure with adjustable gain parameters)
+	- Working along with Schlumberger for they use iDrill to model their Omron and Cameron autodrillers with DrillOps 
+	- Need to integrate SoftSpeed, SoftTorque, Z-Torque control models and tuning for these cases is required (University of Calgary has this modeled)
 
-	Working with Nabors to put their Autodriller on top of our Drilling Simulator to help improve the performance of the existing capabilities
+-Top drive constraint is constant RPM
+	- Need to model topdrive stalling and interaction with auto driller torque limits
+	- Currently, we have guidance based on limited field operations (Qatar, Hebron and land rigs), need to improve this capability inclusion
+	- Need to integrate SoftSpeed, SoftTorque, Z-Torque control models and tuning for these cases is required (University of Calgary has this modeled)
 
-	Extension of the effort to Stiff-string modeling is under development by Dr. Gregory Payette, to leverage the existing capability models and create another fit-to-purpose tool
+- Working with Nabors to put their Autodriller on top of our Drilling Simulator to help improve the performance of the existing capabilities
 
-	Another opportunity for improving the drilling simulator is the inclusion of automation optimization engines (Schlumberger’s DrillOps, Pason’s AutoDAS, Nabors Drill Smart and H&P’s Auto Slide systems) 
+- Extension of the effort to Stiff-string modeling is under development by Dr. Gregory Payette, to leverage the existing capability models and create another fit-to-purpose tool
 
-	Current drilling simulator bit-rock interaction model is complex and accounts for the tracking of the rock surface cutting dynamics. We are reviewing additional DOC based models to make the modeling simpler without jeopardizing the capability of the tool
+- Another opportunity for improving the drilling simulator is the inclusion of automation optimization engines (Schlumberger’s DrillOps, Pason’s AutoDAS, Nabors Drill Smart and H&P’s Auto Slide systems) 
 
-	Other potential upgrades we are focusing on includes: robust borehole friction accounting, angle, spiral and reverse whirl phenomenon. Hydraulics and pump off force with inclusion of pressure pulse effects 
+- Current drilling simulator bit-rock interaction model is complex and accounts for the tracking of the rock surface cutting dynamics. We are reviewing additional DOC based models to make the modeling simpler without jeopardizing the capability of the tool
+
+- Other potential upgrades we are focusing on includes: robust borehole friction accounting, angle, spiral and reverse whirl phenomenon. Hydraulics and pump off force with inclusion of pressure pulse effects 
 
 ## Appendix  
 ### Drilling Simulator: Code Functionality
