@@ -612,7 +612,7 @@ Note: Values of constants $C_2$ and $C_3$ accounts for the motor by-pass valve e
 - Mud flow rate does not account for the pressure pulse in the system, the energy transfer delay from mud-pumps to mud-motor downhole is accounted by various ramp function inputs, i.e.,
 
 $$
-Q_(Mud-pumps)=f(time)
+Q_{Mud-pumps}=f(time)
 $$
 
 ### Special Cases: Mud-motor Integrated Drilling Simulator
